@@ -1,0 +1,53 @@
+---
+
+---
+
+<button class=" bg-white flex justify-center items-center rounded-full w-10 h-10">
+    <a class="scroll-link" href="#aboutMe"><i class="fa-solid fa-chevron-down text-2xl"></i></a>
+</button>
+
+<style>
+    html {
+        scroll-behavior: auto;
+    }
+
+    .scroll-link {
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .scroll-link:hover,
+    .scroll-link.animated {
+        transform: scale(1.2);
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const scrollLink = document.querySelector(".scroll-link");
+
+        // Función para manejar el clic en el enlace
+        scrollLink.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+
+        // Función para manejar el desplazamiento y aplicar la animación
+        window.addEventListener("scroll", function() {
+            const scrollPosition = window.scrollY;
+            const scrollThreshold = 200; // Ajusta este valor según sea necesario
+
+            if (scrollPosition > scrollThreshold) {
+                scrollLink.classList.add("animated");
+            } else {
+                scrollLink.classList.remove("animated");
+            }
+        });
+    });
+</script>

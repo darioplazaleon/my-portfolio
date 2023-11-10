@@ -2,7 +2,7 @@
 import LanguageChange from "./LanguageChange.astro"
 ---
 
-<header class="h-24">
+<header class="h-24 sticky top-0 backdrop-blur z-20">
     <nav class="h-full flex flex-row justify-around items-center">
         <div class="flex flex-row justify-center items-center space-x-4">
             <i class="fa-solid fa-terminal text-white text-2xl"></i>
@@ -15,25 +15,25 @@ import LanguageChange from "./LanguageChange.astro"
             </button>
         </div>
         <ul class="hidden lg:flex flex-row items-center space-x-6 text-white font-bold underline underline-offset-8">
-            <li><a href="#aboutmeS" id="aboutme" data-en="About Me" data-es="Sobre mí">Sobre mi</a></li>
-            <li><a href="#projects" id="projects" data-en="Projects" data-es="Proyectos">Proyectos</a></li>
-            <li><a href="#contact" id="contact" data-en="Contact" data-es="Contacto">Contacto</a></li>
+            <li><a href="#aboutMe" id="aboutme" data-en="About Me" data-es="Sobre mí">Sobre mi</a></li>
+            <li><a href="#projectS" id="projects" data-en="Projects" data-es="Proyectos">Proyectos</a></li>
+            <li><a href="#contacT" id="contact" data-en="Contact" data-es="Contacto">Contacto</a></li>
         </ul>
         <div class="space-x-6">
             <LanguageChange/>
         </div>
         <!-- Menú desplegable en dispositivos móviles -->
-        <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-screen h-screen bg-white shadow z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
-            <ul class="flex flex-col items-center space-y-4 text-black font-bold underline underline-offset-8">
+        <div id="mobile-menu" class=" lg:hidden fixed top-0 left-0 w-screen h-screen bg-white shadow z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <ul class="flex flex-col items-center space-y-20 text-black font-bold underline underline-offset-8 text-3xl mt-32">
                 <!-- Botón para cerrar el menú -->
                 <li>
-                    <button id="close-mobile-menu-button" class="text-black text-2xl">
+                    <button id="close-mobile-menu-button" class="text-black text-3xl">
                         <i class="fa-solid fa-times"></i>
                     </button>
                 </li>
-                <li><a href="#aboutmeS" id="aboutme-mobile" data-en="About Me" data-es="Sobre mí">Sobre mi</a></li>
-                <li><a href="#projects" id="projects-mobile" data-en="Projects" data-es="Proyectos">Proyectos</a></li>
-                <li><a href="#contact" id="contact-mobile" data-en="Contact" data-es="Contacto">Contacto</a></li>
+                <li><a href="#aboutMe" id="aboutme-mobile" data-en="About Me" data-es="Sobre mí">Sobre mi</a></li>
+                <li><a href="#projectS" id="projects-mobile" data-en="Projects" data-es="Proyectos">Proyectos</a></li>
+                <li><a href="#contacT" id="contact-mobile" data-en="Contact" data-es="Contacto">Contacto</a></li>
             </ul>
         </div>
     </nav>
@@ -66,19 +66,18 @@ import LanguageChange from "./LanguageChange.astro"
     const menuLinks = document.querySelectorAll("#mobile-menu a");
 
     menuLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-            mobileMenu.classList.toggle("translate-x-full");
-            body.classList.remove("overflow-hidden");
-            e.preventDefault(); // Evita que el enlace se siga como un enlace normal
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: "smooth"
-                });
-            }
-        });
+    link.addEventListener("click", function (e) {
+        mobileMenu.classList.toggle("translate-x-full");
+        body.classList.remove("overflow-hidden");
+        e.preventDefault();
+
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+        }
     });
+});
 </script>
 
