@@ -1,0 +1,17 @@
+---
+const {image} = Astro.props
+---
+
+<div class="bg-white rounded">
+    <img src={image} alt="" class="imageProject w-40">
+    <div class="h-10 flex flex-row justify-center items-center space-x-20 text-2xl">
+        <a href="" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://darioplaza.tech" target="_blank"><i class="fa-solid fa-link"></i></a>
+    </div>
+</div>
+
+<style>
+    .imageProject {
+        width: 20rem;
+    }
+</style>

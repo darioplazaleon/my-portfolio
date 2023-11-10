@@ -1,0 +1,33 @@
+.menuMe{
+    background-color: #373c59;
+    width: 360px;
+    height: 27rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+}
+
+.content {
+    width: 80%;
+    height: 80%;
+    min-height: 70%;
+}
+
+.active {
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (min-width: 1024px) {
+    .menuMe {
+        width: 50%;
+    }
+}
