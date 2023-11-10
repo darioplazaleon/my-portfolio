@@ -4,18 +4,16 @@ import GoToButton from "../GoToButton.astro";
 
 ---
 
-<section id="hero" class="flex flex-col justify-center items-center h-screen">
-    <div class="text-white flex flex-col items-center space-y-4 mb-48 mt-12">
+<section id="hero" class=" flex flex-col justify-center items-center h-screen  max-h-screen mb-10">
+    <div class="relative mb-56 text-white h-3/4 flex flex-col justify-center items-center space-y-4 lg:mb-32">
         <p class="text-3xl lg:text-4xl text-center" data-en="Hi!, i'm" data-es="¡Hola!, soy" id="heroGreeting">¡Hola!, soy</p>
         <span class="text-7xl lg:text-9xl font-bold text-center">Dario Plaza Leon</span>
         <AnimatedText text="Apasionado por la tecnologia"/>
-        <div class="flex space-x-4 text-white text-3xl relative z-10">
+        <div class="flex space-x-4 text-white text-3xl ">
             <a href="https://www.linkedin.com/in/dario-plaza/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/darioplazaleon" target="_blank"><i class="fa-brands fa-square-github"></i></a>
             <a href="mailto:darioplaza02@hotmail.com" target="_blank"><i class="fa-solid fa-square-envelope"></i></a>
         </div>
+        <div class="text-black absolute bottom-0"><GoToButton/></div>
     </div>
-    <GoToButton/>
 </section>
-
-
