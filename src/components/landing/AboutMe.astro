@@ -1,12 +1,12 @@
 ---
-import MenuMe from "../MenuMe"
+import MenuMe from "../MenuMe.jsx"
 ---
 
 <section id="aboutMe" class="space-y-20 flex flex-col justify-center w-full items-center h-screen max-h-screen mt-28">
     <h1 class="text-white font-bold text-5xl">Sobre Mí</h1>
     <div class="flex flex-col space-y-10 justify-evenly items-center lg: lg:flex lg:flex-row" id="menuContainer">
-        <MenuMe client:load/>
-        <img src="./Foto.PNG" alt="Foto DNI" class="imageMe rounded ">
+        <MenuMe client:only="react"/>
+        <img src="/Foto.PNG." alt="Foto DNI" class="imageMe rounded ">
     </div>
 </section>
 

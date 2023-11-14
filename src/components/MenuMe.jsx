@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../styles/menuMe.module.css";
+import "../styles/menuMe.css";
 
 const MenuMe = () => {
   const [activeContent, setActiveContent] = useState("about");
@@ -9,14 +9,14 @@ const MenuMe = () => {
   };
 
   return (
-    <div className={styles.menuMe}>
+    <div className="menuMe">
       <div className="menu flex flex-row space-x-12 font-semibold text-2xl">
-        <button onClick={() => handleMenuClick("about")} className={activeContent === 'about' ? styles.active : ''}>Sobre Mí</button>
-        <button onClick={() => handleMenuClick("technologies")} className={activeContent === 'technologies' ? styles.active : ''}>
+        <button onClick={() => handleMenuClick("about")} className={activeContent === 'about' ? "active" : ''}>Sobre Mí</button>
+        <button onClick={() => handleMenuClick("technologies")} className={activeContent === 'technologies' ? 'active' : ''}>
           Tecnologías
         </button>
       </div>
-      <div className={styles.content}>
+      <div className="content">
         {activeContent === "about" && (
             <div>
           <p className="mt-8">
