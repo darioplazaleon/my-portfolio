@@ -2,8 +2,8 @@
 
 ---
 
-<button class=" bg-white flex justify-center items-center rounded-full w-10 h-10">
-    <a class="scroll-link" href="#aboutMe"><i class="fa-solid fa-chevron-down text-2xl"></i></a>
+<button class=" bg-white flex justify-center items-center rounded-full w-10 h-10 scroll-link">
+    <a class="" href="#aboutMe"><i class="fa-solid fa-chevron-down text-2xl"></i></a>
 </button>
 
 <style>
@@ -13,11 +13,18 @@
 
     .scroll-link {
         cursor: pointer;
-        transition: transform 0.3s ease-in-out;
+        animation: bounce 0.5s infinite alternate;
+    }
+
+    @keyframes bounce {
+        to {
+            transform: translateY(-8px);
+        }
     }
 
     .scroll-link:hover,
     .scroll-link.animated {
+        animation: none; /* Detener la animación al hacer hover */
         transform: scale(1.2);
     }
 </style>
@@ -30,7 +37,7 @@
         scrollLink.addEventListener("click", function (e) {
             e.preventDefault();
 
-            const targetId = this.getAttribute("href").substring(1);
+            const targetId = this.querySelector("a").getAttribute("href").substring(1);
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
