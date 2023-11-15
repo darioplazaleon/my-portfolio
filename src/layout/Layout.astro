@@ -22,7 +22,7 @@ const options: ISourceOptions = {
       },
     },
     color: {
-      value: "#ffffff",
+      value: "#000000",
     },
     shape: {
       type: "circle",
@@ -57,7 +57,7 @@ const options: ISourceOptions = {
     line_linked: {
       enable: true,
       distance: 150,
-      color: "#ffffff",
+      color: "#000000",
       opacity: 0.4,
       width: 1,
     },
@@ -157,7 +157,7 @@ const options: ISourceOptions = {
   </head>
   <body class="custom-gradient">
     <Navbar />
-    <main class="container mx-auto">
+    <main class="w-full">
       <slot />
     </main>
     <Particles id="tsparticles" options={options} init="particlesInit" />
@@ -165,10 +165,20 @@ const options: ISourceOptions = {
   </body>
   <style>
     .custom-gradient {
-      /* background-color: #4cb2c4; */
-      background: linear-gradient(to bottom, #14213d, #264fa7);
+      background-color: #ffffff;
       width: 100%;
       height: 100%; /* Ajusta la altura según tus necesidades */
+      overflow-x: hidden;
+    }
+
+    main {
+      overflow-x: hidden;
+    }
+
+    @media screen and (max-width: 767px) {
+        body {
+            overflow-x: hidden;
+        }
     }
   </style>
 

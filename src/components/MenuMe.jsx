@@ -9,11 +9,11 @@ const MenuMe = () => {
   };
 
   return (
-    <div className="menuMe">
+    <div className="menuMe border">
       <div className="menu flex flex-row space-x-12 font-semibold text-2xl">
-        <button onClick={() => handleMenuClick("about")} className={activeContent === 'about' ? "active" : ''}>Sobre Mí</button>
-        <button onClick={() => handleMenuClick("technologies")} className={activeContent === 'technologies' ? 'active' : ''}>
-          Tecnologías
+        <button onClick={() => handleMenuClick("about")} className={activeContent === 'about' ? "active" : 'notActive'}><h1>Sobre Mí</h1></button>
+        <button onClick={() => handleMenuClick("technologies")} className={activeContent === 'technologies' ? 'active' : 'notActive'}>
+          <h1>Tecnologías</h1> 
         </button>
       </div>
       <div className="content">
@@ -29,6 +29,11 @@ const MenuMe = () => {
             con otros apasionados por el tema. ¡Conéctate conmigo si compartes
             estos intereses!
           </p>
+          <ul className="mt-4">
+            <li className="font-semibold">- Edad: 21</li>
+            <li className="flex font-semibold">- Pais: Argentina<img src="https://api.iconify.design/twemoji:flag-argentina.svg" alt="" className="pl-2"/>
+            </li>
+          </ul>
             </div>
         )}
         {activeContent === "technologies" && (

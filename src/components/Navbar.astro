@@ -22,8 +22,8 @@ import LanguageChange from "./LanguageChange.astro"
         <div class="space-x-6">
             <LanguageChange/>
         </div>
-        <!-- Menú desplegable en dispositivos móviles -->
-        <div id="mobile-menu" class=" lg:hidden fixed top-0 left-0 w-screen h-screen bg-white shadow z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <!-- NAVBAR EN MOBILE -->
+        <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-screen bg-white shadow z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
             <ul class="flex flex-col items-center space-y-20 text-black font-bold underline underline-offset-8 text-3xl mt-32">
                 <!-- Botón para cerrar el menú -->
                 <li>
@@ -43,6 +43,11 @@ import LanguageChange from "./LanguageChange.astro"
     ul {
         height: 2.5rem;
     }
+
+    #mobile-menu {
+        background-color: black;
+        color: white;
+    }
 </style>
 
 <script>
@@ -54,11 +59,13 @@ import LanguageChange from "./LanguageChange.astro"
 
     mobileMenuButtonIcon.addEventListener("click", function () {
         mobileMenu.classList.toggle("translate-x-full");
+        mobileMenu.classList.remove("hidden")
         body.classList.toggle("overflow-hidden");
     });
 
     closeMobileMenuButton.addEventListener("click", function () {
         mobileMenu.classList.toggle("translate-x-full");
+        mobileMenu.classList.add("hidden")
         body.classList.toggle("overflow-hidden");
     });
 
@@ -68,6 +75,7 @@ import LanguageChange from "./LanguageChange.astro"
     menuLinks.forEach(link => {
     link.addEventListener("click", function (e) {
         mobileMenu.classList.toggle("translate-x-full");
+        mobileMenu.classList.add("hidden")
         body.classList.remove("overflow-hidden");
         e.preventDefault();
 
