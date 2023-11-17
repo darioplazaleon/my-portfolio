@@ -1,17 +1,55 @@
 ---
-const {image, urlDemo, urlRepo} = Astro.props
+const {image, urlDemo, urlRepo, description} = Astro.props
+
+import AstroIcon from '../icons/AstroIcon.astro'
+import ReactIcon from '../icons/ReactIcon.astro'
+import TailwindIcon from "../icons/TailwindIcon.astro"
 ---
 
-<div class="bg-white rounded">
-    <img src={image} alt="" class="imageProject w-40">
-    <div class="h-10 flex flex-row justify-center items-center space-x-20 text-2xl">
-        <a href={urlRepo} target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href={urlDemo} target="_blank"><i class="fa-solid fa-link"></i></a>
+<div class="cardContainer rounded border">
+    <img src={image} alt="" class="imageProject ">
+    <div class="flex flex-col justify-center items-center text-2xl space-y-5">
+        <div class="flex space-x-20">
+            <a><i id="infoButton" class="fa-solid fa-circle-info"></i></a>
+            <a href={urlRepo} target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href={urlDemo} target="_blank"><i class="fa-solid fa-link"></i></a>
+        </div>
+        <div id="infoCard" class="hidden border-2 border-dashed w-full text-base">
+            <p class="text-center">{description}</p>
+            <p class="ml-2 font-bold">Tecnologias: </p>
+            <ul class="ml-4 font-semibold">
+                <li class="flex mt-2">- Astro <AstroIcon/></li>
+                <li class="flex mt-2">- React <ReactIcon/></li>
+                <li class="flex mt-2">- TailwindCSS <TailwindIcon/></li>
+            </ul>
+        </div>
     </div>
 </div>
 
 <style>
+    .cardContainer {
+        background-color: white;
+        color: black;
+    }
+
+    #infoButton {
+        cursor: pointer;
+    }
+
     .imageProject {
         width: 20rem;
     }
+
+    #infoCard {
+        height: 150px;
+    }
 </style>
+
+<script>
+    const infoButton = document.getElementById('infoButton')
+    const infoCard = document.getElementById("infoCard")
+
+    infoButton.addEventListener("click", function(){
+        infoCard.classList.toggle('hidden')
+    })
+</script>

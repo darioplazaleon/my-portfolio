@@ -1,37 +1,25 @@
 ---
-import Blob from "../../icons/Blob.astro";
+import ContactForm from "../ContactForm.astro";
 ---
 
 <section
   id="contacT"
-  class="w-full h-screen flex flex-col justify-center items-center"
+  class="w-screen h-screen flex flex-col justify-evenly items-center"
 >
-  <h1 class="text-white text-5xl font-bold">Contacto</h1>
-  <!-- <Blob/> -->
-  <div
-    class="bg-white flex flex-col justify-center items-center space-y-10 w-5/6 h-2/6 rounded mt-20 lg:w-4/6"
-  >
-    <a
-      href="https://github.com/darioplazaleon"
-      target="_blank"
-      class="flex flex-row justify-center items-center mr-36"
-    >
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-        class="mr-4 w-10"
-      /> Github
-    </a>
-    <a
-      href="https://www.linkedin.com/in/dario-plaza/"
-      target="_blank"
-      class="flex flex-row justify-center items-center mr-36"
-    >
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="mr-4 w-10"
-      /> LinkedIn
-    </a>
-    <a href="mailto:darioplaza02@hotmail.com" class="flex flex-row justify-center items-center"
-      ><i class="fa-solid fa-inbox pr-5 text-3xl"></i> darioplaza02@hotmail.com</a
-    >
+<h1 class="text-2xl font-bold">// Contacto</h1>
+<div class=" w-1/2 h-1/2 border flex flex-row space-x-14">
+  <div>
+    <h1>Contactemonos</h1>
+    <p>Si te gusto mi perfil pongamosnos en contacto</p>
+    <ul></ul>
   </div>
+  <ContactForm/>
+</div>
 </section>
+
+
+<style>
+  #contacT {
+    background-color: #FCA311;
+  }
+</style>

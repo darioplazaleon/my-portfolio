@@ -2,21 +2,168 @@
 import AnimatedText from "../AnimatedText.astro";
 import GoToButton from "../GoToButton.astro";
 
+// PARTICULAS
+import Particles from "astro-particles";
+import type { ISourceOptions } from "tsparticles-engine";
+
+import { type Container, type Engine} from "tsparticles-engine";
+
+const options: ISourceOptions = {
+  fullScreen: {
+    enable: false,
+    zIndex: 0,
+  },
+  style:{
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100vh",
+  },
+  particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+    color: {
+      value: "#ffffff",
+    },
+    shape: {
+      type: "circle",
+      stroke: {
+        width: 0,
+        color: "#ffffff",
+      },
+      polygon: {
+        nb_sides: 5,
+      },
+    },
+    opacity: {
+      value: 0.5,
+      random: false,
+      anim: {
+        enable: false,
+        speed: 1,
+        opacity_min: 0.1,
+        sync: false,
+      },
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: {
+        enable: false,
+        speed: 40,
+        size_min: 0.1,
+        sync: false,
+      },
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1,
+    },
+    move: {
+      enable: true,
+      speed: 2,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200,
+      },
+    },
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "repulse",
+      },
+      resize: true,
+    },
+    modes: {
+      grab: {
+        distance: 400,
+        line_linked: {
+          opacity: 1,
+        },
+      },
+      bubble: {
+        distance: 400,
+        size: 40,
+        duration: 2,
+        opacity: 8,
+        speed: 3,
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.4,
+      },
+      push: {
+        particles_nb: 4,
+      },
+      remove: {
+        particles_nb: 2,
+      },
+    },
+  },
+};
 ---
 
-<section id="hero" class=" flex flex-col justify-center items-center h-screen  max-h-screen mb-10">
+<section id="hero" class=" flex flex-col justify-center items-center h-screen  max-h-screen">
+    <div class="containerParticles">
+        <Particles id="particlesHelp" options={options} init="particlesInit"/>
+    </div>
     <div class="relative mb-56 text-black h-3/4 flex flex-col justify-center items-center space-y-4 lg:mb-32">
         <p class="text-3xl lg:text-4xl text-center" data-en="Hi!, i'm" data-es="¡Hola!, soy" id="heroGreeting">¡Hola!, soy</p>
         <span class="text-7xl lg:text-9xl font-bold text-center">Dario Plaza Leon</span>
         <AnimatedText text="Apasionado por la tecnologia"/>
-        <div class="flex space-x-4 text-web-orange-500 text-3xl ">
+        <div class="flex space-x-4 text-web-orange-500 text-3xl z-10">
             <a href="https://www.linkedin.com/in/dario-plaza/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/darioplazaleon" target="_blank"><i class="fa-brands fa-square-github"></i></a>
             <a href="mailto:darioplaza02@hotmail.com" target="_blank"><i class="fa-solid fa-square-envelope"></i></a>
         </div>
-        <div class="text-black absolute bottom-0"><GoToButton/></div>
+        <div class="text-black absolute bottom-0 z-10"><GoToButton/></div>
     </div>
 </section>
 
 <style>
+    #hero {
+        background: linear-gradient(to bottom, #000000, #14213d);
+        color: #ffffff;
+        position: relative;
+    }
+
+    .containerParticles {
+        display: none;
+    }
 </style>
+
+<script>
+    import { loadFull } from "tsparticles";
+
+    // the function name is the parameter passed to the init attribute
+    // required
+    // add the function to window is mandatory, it will be searched there
+    window.particlesInit = async function (engine: Engine) {
+      await loadFull(engine);
+    };
+
+    // the function name is the parameter passed to the loaded attribute
+    // optional
+    // add the function to window is mandatory, it will be searched there
+    window.particlesLoaded = function (container: Container) {
+      console.log("particlesLoaded callback");
+    };
+  </script>
