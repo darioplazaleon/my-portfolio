@@ -4,22 +4,39 @@ import ContactForm from "../ContactForm.astro";
 
 <section
   id="contacT"
-  class="w-screen h-screen flex flex-col justify-evenly items-center"
+  class="w-screen flex flex-col justify-evenly items-center"
 >
-<h1 class="text-2xl font-bold">// Contacto</h1>
-<div class=" w-1/2 h-1/2 border flex flex-row space-x-14">
-  <div>
-    <h1>Contactemonos</h1>
-    <p>Si te gusto mi perfil pongamosnos en contacto</p>
-    <ul></ul>
+<h1 class="text-4xl font-bold text-web-orange-500">// Contacto</h1>
+<div class=" w-5/6 lg:w-4/6 h-full lg:h-4/6  flex flex-col lg:flex-row space-x-14 pt-6">
+  <div class="contactInfoContainer w-full lg:w-2/6 h-1/2 flex flex-col justify-center items-center">
+    <h1 class="text-2xl">Ponte en contacto</h1>
+    <p class="pl-4 text-center pt-6">Si te gusto mi perfil y crees que puedo ayudarte, utiliza el formulario de contacto para comunicarte conmigo o podes usar mis redes mas abajo. Espero con ansias escucharte y ayudarte en lo que pueda.</p>
+    <div class="flex flex-col pt-4 text-web-orange-500">
+      <a href="https://www.linkedin.com/in/dario-plaza/" target="_blank"><i class="fa-brands fa-linkedin text-2xl pr-2"></i>@dario-plaza</a>
+      <a href="https://github.com/darioplazaleon" target="_blank"><i class="fa-brands fa-square-github text-2xl pr-2"></i>@darioplazaleon</a>
+      <a href="mailto:darioplaza02@hotmail.com" target="_blank"><i class="fa-solid fa-square-envelope text-2xl pr-2"></i>darioplaza02@hotmail.com</a>
   </div>
-  <ContactForm/>
+  </div>
+  <div class="w-4/6 h-full flex">
+    <ContactForm/>
+  </div>
 </div>
 </section>
 
 
 <style>
   #contacT {
-    background-color: #FCA311;
+    height: 40rem;
+    background-color: #14213d;
+  }
+  
+  .contactInfoContainer {
+    color: white;
+  }
+
+  @media (max-width: 1024px) {
+    #contacT {
+      height: 100vh;
+    }
   }
 </style>

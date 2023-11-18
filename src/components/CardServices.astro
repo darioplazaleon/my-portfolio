@@ -1,3 +1,25 @@
-<article>
-    
+---
+import { Image } from "astro:assets";
+
+const {urlIService, titleService, descService} = Astro.props
+---
+
+<article class="serviceContainer rounded-2xl w-96 h-96 overflow-hidden">
+    <div class="w-full h-full">
+        <Image src={urlIService} alt="Foto del servicio" width={420} height={200} class="object-cover h-1/2 w-full"/>
+        <div class="serviceInfoContainer w-full h-1/2 min-w-1/2 text-center pt-2 bg-white flex flex-col justify-center items-center">
+            <h1 class="text-2xl font-bold px-4">{titleService}</h1>
+            <p class="pt-2 px-4 pb-4">{descService}</p>
+        </div>
+    </div>
 </article>
+
+<style>
+    .serviceContainer {
+        border-radius: 20px; /* Ajusta el valor según lo necesario */
+    }
+
+    .serviceInfoContainer {
+        background-color: white;
+    }
+</style>
