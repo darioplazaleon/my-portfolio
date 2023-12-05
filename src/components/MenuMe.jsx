@@ -29,11 +29,6 @@ const MenuMe = () => {
             con otros apasionados por el tema. ¡Conéctate conmigo si compartes
             estos intereses!
           </p>
-          <ul className="mt-4">
-            <li className="font-semibold">- Edad: 21</li>
-            <li className="flex font-semibold">- Pais: Argentina<img src="https://api.iconify.design/twemoji:flag-argentina.svg" alt="" className="pl-2"/>
-            </li>
-          </ul>
             </div>
         )}
         {activeContent === "technologies" && (

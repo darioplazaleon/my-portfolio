@@ -4,7 +4,7 @@ import ContactForm from "../ContactForm.astro";
 
 <section
   id="contacT"
-  class="w-screen flex flex-col justify-evenly items-center"
+  class="w-screen lg:h-[40rem] flex flex-col justify-evenly items-center"
 >
 <h1 class="text-4xl font-bold text-web-orange-500">// Contacto</h1>
 <div class=" w-5/6 lg:w-4/6 h-full lg:h-4/6  flex flex-col lg:flex-row space-x-14 pt-6">
@@ -17,7 +17,7 @@ import ContactForm from "../ContactForm.astro";
       <a href="mailto:darioplaza02@hotmail.com" target="_blank"><i class="fa-solid fa-square-envelope text-2xl pr-2"></i>darioplaza02@hotmail.com</a>
   </div>
   </div>
-  <div class="w-4/6 h-full flex">
+  <div class="w-4/6 h-full">
     <ContactForm/>
   </div>
 </div>
@@ -26,7 +26,6 @@ import ContactForm from "../ContactForm.astro";
 
 <style>
   #contacT {
-    height: 40rem;
     background-color: #14213d;
   }
   
@@ -34,9 +33,4 @@ import ContactForm from "../ContactForm.astro";
     color: white;
   }
 
-  @media (max-width: 1024px) {
-    #contacT {
-      height: 100vh;
-    }
-  }
 </style>

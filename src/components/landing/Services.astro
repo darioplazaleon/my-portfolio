@@ -2,13 +2,16 @@
 import CardServices from "../CardServices.astro";
 ---
 
-<section id="services" class="w-screen h-screen flex flex-col lg:justify-evenly items-center">
+<section id="services" class="w-screen lg:h-[1400px] flex flex-col items-center justify-evenly">
     <h1 class="text-4xl font-bold text-web-orange-500">// Servicios</h1>
-    <div class="h-5/6 w-5/6 flex justify-center items-center flex-col space-y-6 pt-14 lg:pt-0 lg:flex-row lg:space-x-10 lg:space-y-0">
-        <CardServices urlIService="/images/pic1.jpg" titleService="Desarrollo Web" descService="Implementare las mejores tecnologias para crear una pagina web a medida. Brindo soluciones totalmente personalizadas y eficientes."/>
-        <CardServices urlIService="/images/seoPic.png" titleService="Optimizacion SEO" descService="Aumento la visibilidad de tu pagina web en los motores de busqueda para que puedas llegar a mas personas."/>
-        <CardServices urlIService="/images/mantenimientoWeb.jpg" titleService="Actualizacion y mantenimiento web" descService="Me voy a encargar de mantener tu pagina web actualizada, segura y libre de errorres para que puedas centrarte en tu negocio sin procupaciones."/>
-        <CardServices urlIService="/images/apiIntegracion.png" titleService="Integracion de sistemas y APIs" descService="Integro sistemas y APIs para que tu pagina web pueda interactuar con otras plataformas y servicios."/>
+    <div class="h-full lg:h-5/6 w-11/12 flex flex-col items-center space-y-6">
+        <div class="flex flex-wrap justify-center gap-6">
+            <CardServices urlIService="/images/pic1.jpg" titleService="Desarrollo Web" descService="Implementare las mejores tecnologias para crear una pagina web a medida. Brindo soluciones totalmente personalizadas y eficientes."/>
+            <CardServices urlIService="/images/apiIntegracion.png" titleService="Desarrollo Backend" descService="Integro sistemas y APIs para que tu pagina web pueda interactuar con otras plataformas, serviciosy y tenga nuevas funcionalidades."/>
+            <CardServices urlIService="/images/seoPic.png" titleService="Optimizacion SEO" descService="Aumento la visibilidad de tu pagina web en los motores de busqueda para que puedas llegar a mas personas."/>
+            <CardServices urlIService="/images/mantenimientoWeb.jpg" titleService="Actualizacion y mantenimiento web" descService="Me voy a encargar de mantener tu pagina web actualizada, segura y libre de errorres para que puedas centrarte en tu negocio sin procupaciones."/>
+        </div>
+        <p class="text-white text-xl underline">Y muchos mas...</p>
     </div>
 </section>
 
@@ -19,7 +22,7 @@ import CardServices from "../CardServices.astro";
 
     @media (max-width: 1024px) {
         #services {
-            height: 1800px;
+            height: fit-content;
         }
     }
 </style>
