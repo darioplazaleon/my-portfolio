@@ -1,12 +1,14 @@
 ---
 import MenuMe from "../MenuMe.jsx";
+
+const { aboutInfo } = Astro.props
 ---
 
 <section
   id="aboutMe"
   class="space-y-20 flex flex-col justify-center w-screen items-center h-screen"
 >
-  <h1 class="text-web-orange-500 font-bold text-5xl">// Sobre Mí</h1>
+  <h1 class="text-web-orange-500 font-bold text-5xl">{aboutInfo.title}</h1>
   <div
     class="flex flex-col items-center w-full lg:justify-center lg:h-4/6 lg:flex lg:flex-row"
     id="menuContainer"
@@ -14,7 +16,7 @@ import MenuMe from "../MenuMe.jsx";
   <figure class="marco border mb-10 lg:mr-20">
     <img src="/Foto.PNG" alt="Foto mia tipo CV" class="imagen-superpuesta h-80" />
   </figure>
-    <MenuMe client:load />
+    <MenuMe infoMenu={aboutInfo.menu} client:load />
   </div>
 </section>
 

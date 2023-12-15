@@ -1,18 +1,19 @@
 ---
 import { Image } from "astro:assets";
 
-const {urlIService, titleService, descService} = Astro.props
+const {infoCard} = Astro.props
+
 ---
 
 <article class="serviceContainer rounded-2xl w-full sm:w-96 h-[500px] overflow-hidden">
     <div class="w-full h-full">
-        <Image src={urlIService} alt="Foto del servicio" width={420} height={200} class="object-cover h-1/2 w-full"/>
+        <Image src={infoCard.image} alt="Foto del servicio" width={420} height={200} class="object-cover h-1/2 w-full"/>
         <div class="serviceInfoContainer w-full h-1/2 min-w-1/2 text-center pt-4 bg-white flex flex-col items-center space-y-2 lg:space-y-4">
             <div class="h-2/6 flex justify-center items-center">
-                <h1 class="text-2xl font-bold px-4 mt-4">{titleService}</h1>
+                <h1 class="text-2xl font-bold px-4 mt-4">{infoCard.title}</h1>
             </div>
             <div class="h-4/6">
-                <p class="pt-2 px-4 pb-4">{descService}</p>
+                <p class="pt-2 px-4 pb-4">{infoCard.description}</p>
             </div>
         </div>
     </div>

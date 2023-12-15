@@ -1,26 +1,10 @@
+---
+const { linkButton, buttonText } = Astro.props
+---
 
-<select id="languageSelect" value="ES" class="bg-white font-bold rounded-xl p-2 text-center">
-    <option value="es">ES</option>
-    <option value="en">EN</option>
-</select>
 
-<script>
-    const links = document.querySelectorAll('ul a');
-    const hero = document.querySelector('#heroGreeting')
-    
-    const languageSelect = document.getElementById("languageSelect")
-
-    languageSelect.addEventListener("change", function(){
-        const languageSelected = (document.getElementById("languageSelect") as HTMLInputElement).value
-
-        links.forEach(link => {
-            if (languageSelected === "en") {
-                link.textContent = link.getAttribute("data-en");
-                hero.textContent = hero.getAttribute("data-en");
-            } else if (languageSelected === "es") {
-                link.textContent = link.getAttribute("data-es");
-                hero.textContent = hero.getAttribute("data-es");
-            }
-        });
-    })
-</script>
+<button
+  class="text-white bg-web-orange-500 font-bold rounded-xl p-2 text-center w-20"
+>
+  <a href={linkButton}>{buttonText}</a>
+</button>

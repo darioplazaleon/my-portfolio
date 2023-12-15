@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/menuMe.css";
 
-const MenuMe = () => {
+const MenuMe = ({infoMenu}) => {
   const [activeContent, setActiveContent] = useState("about");
 
   const handleMenuClick = (content) => {
@@ -11,23 +11,16 @@ const MenuMe = () => {
   return (
     <div className="menuMe border">
       <div className="menu flex flex-row space-x-12 font-semibold text-2xl">
-        <button onClick={() => handleMenuClick("about")} className={activeContent === 'about' ? "active" : 'notActive'}><h1>Sobre Mí</h1></button>
+        <button onClick={() => handleMenuClick("about")} className={activeContent === 'about' ? "active" : 'notActive'}><h1>{infoMenu.section1}</h1></button>
         <button onClick={() => handleMenuClick("technologies")} className={activeContent === 'technologies' ? 'active' : 'notActive'}>
-          <h1>Tecnologías</h1> 
+          <h1>{infoMenu.section2}</h1> 
         </button>
       </div>
       <div className="content">
         {activeContent === "about" && (
             <div>
           <p className="mt-8">
-            Hola, soy Dario. Mi pasión es la tecnología y el aprendizaje. Desde
-            pequeño, me he sentido fascinado por cómo la tecnología cambia el
-            mundo. Siempre estoy buscando aprender algo nuevo, ya sea
-            desmontando dispositivos o tomando cursos en línea. Creo que el
-            aprendizaje constante es esencial para crecer. Mi objetivo es seguir
-            explorando el mundo de la tecnología y compartir mis conocimientos
-            con otros apasionados por el tema. ¡Conéctate conmigo si compartes
-            estos intereses!
+            {infoMenu.texts1}
           </p>
             </div>
         )}

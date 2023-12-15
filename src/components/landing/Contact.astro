@@ -1,16 +1,18 @@
 ---
 import ContactForm from "../ContactForm.astro";
+
+const { infoContact } = Astro.props
 ---
 
 <section
   id="contacT"
   class="w-screen lg:h-[40rem] flex flex-col justify-evenly items-center"
 >
-<h1 class="text-4xl font-bold text-web-orange-500">// Contacto</h1>
+<h1 class="text-4xl font-bold text-web-orange-500">{infoContact.title}</h1>
 <div class=" w-5/6 lg:w-4/6 h-full lg:h-4/6  flex flex-col lg:flex-row space-x-14 pt-6">
   <div class="contactInfoContainer w-full lg:w-2/6 h-1/2 flex flex-col justify-center items-center">
-    <h1 class="text-2xl">Ponte en contacto</h1>
-    <p class="pl-4 text-center pt-6">Si te gusto mi perfil y crees que puedo ayudarte, utiliza el formulario de contacto para comunicarte conmigo o podes usar mis redes mas abajo. Espero con ansias escucharte y ayudarte en lo que pueda.</p>
+    <h1 class="text-2xl">{infoContact.subtitle}</h1>
+    <p class="pl-4 text-center pt-6">{infoContact.sub}</p>
     <div class="flex flex-col pt-4 text-web-orange-500">
       <a href="https://www.linkedin.com/in/dario-plaza/" target="_blank"><i class="fa-brands fa-linkedin text-2xl pr-2"></i>@dario-plaza</a>
       <a href="https://github.com/darioplazaleon" target="_blank"><i class="fa-brands fa-square-github text-2xl pr-2"></i>@darioplazaleon</a>
@@ -18,7 +20,7 @@ import ContactForm from "../ContactForm.astro";
   </div>
   </div>
   <div class="w-4/6 h-full">
-    <ContactForm/>
+    <ContactForm infoForm={infoContact.form}/>
   </div>
 </div>
 </section>

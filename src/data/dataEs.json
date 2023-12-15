@@ -1,0 +1,87 @@
+{
+  "Navbar": [
+    {
+      "aboutme": "Acerca de mí",
+      "proyects": "Proyectos",
+      "services": "Servicios",
+      "contact": "Contacto",
+      "button": "/en",
+      "buttonText": "EN"
+    }
+  ],
+  "Hero": [
+    {
+      "introduction": "Hola, soy",
+      "name": "Darío Plaza León",
+      "profession": "Desarrollador de Software"
+    }
+  ],
+  "About": {
+    "title": "// Acerca de mí",
+    "menu": {
+      "section1": "Acerca de mí",
+      "section2": "Tecnologías",
+      "texts1": "Hola, soy Darío. Mi pasión es la tecnología y el aprendizaje. Desde que era niño, me ha fascinado cómo la tecnología cambia el mundo. Siempre estoy buscando aprender algo nuevo, ya sea desmontando dispositivos o tomando cursos en línea. Creo que el aprendizaje continuo es esencial para el crecimiento. Mi objetivo es seguir explorando el mundo de la tecnología y compartir mis conocimientos con otros entusiastas. ¡Conéctate conmigo si compartes estos intereses!"
+    }
+  },
+  "Services": {
+    "title": "// Servicios",
+    "more": "Y muchos más...",
+    "services": [
+      {
+        "title": "Desarrollo Web",
+        "description": "Implementaré las mejores tecnologías para crear un sitio web a medida. Ofrezco soluciones completamente personalizadas y eficientes.",
+        "image": "/images/pic1.jpg"
+      },
+      {
+        "title": "Desarrollo Backend",
+        "description": "Integro sistemas y APIs para que tu sitio web pueda interactuar con otras plataformas y servicios, obteniendo nuevas funcionalidades.",
+        "image": "/images/apiIntegracion.png"
+      },
+      {
+        "title": "Optimización SEO",
+        "description": "Aumento la visibilidad de tu sitio web en los motores de búsqueda para que puedas llegar a más personas.",
+        "image": "/images/seoPic.png"
+      },
+      {
+        "title": "Mantenimiento y Actualización Web",
+        "description": "Me encargaré de mantener actualizado, seguro y libre de errores tu sitio web para que puedas enfocarte en tu negocio sin preocupaciones.",
+        "image": "/images/mantenimientoWeb.jpg"
+      }
+    ]
+  },
+  "Projects": {
+    "title": "// Proyectos",
+    "projects": [
+      {
+        "title": "Tetris Demo",
+        "description": "En este proyecto, implementé un juego de Tetris en Python utilizando la biblioteca Pygame como parte de mi práctica y consolidación de conocimientos en Programación Orientada a Objetos (OOP).",
+        "image": "/images/projects/TetrisImage.JPG",
+        "urlRepo": "https://github.com/darioplazaleon/tetris-python.git",
+        "urlDemo": "https://darioplaza.tech"
+      },
+      {
+        "title":"Lol App",
+        "description": "Desarrollé un proyecto utilizando la API de Riot Games con el propósito de demostrar mi habilidad para trabajar con APIs. Esta aplicación demuestra cómo integrar y manejar datos de la API de Riot Games, para crear una plataforma que aproveche los datos proporcionados.",
+        "image": "/images/projects/LolApp.JPG",
+        "urlRepo": "https://github.com/darioplazaleon/tetris-python.git",
+        "urlDemo": "https://darioplaza.tech"
+      }
+    ]
+  },
+  "Contact": {
+    "title": "// Contacto",
+    "subtitle": "Ponte en contacto",
+    "sub": "Si te gustó mi perfil y crees que puedo ayudarte, por favor utiliza el formulario de contacto para comunicarte conmigo, o puedes utilizar mis redes sociales que se encuentran listadas a continuación. Espero con interés saber de ti y ayudarte en todo lo que pueda.",
+    "form": {
+      "name": "Nombre:",
+      "email": "Correo electrónico:",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "button": "Enviar"
+    }
+  },
+  "Footer": {
+    "linkCV": "https://drive.google.com/file/d/1ZAn_rOgUI0GgLtFB8nvFFkPx2b35gCsI/view?usp=drive_link"
+  }
+}

@@ -1,0 +1,30 @@
+---
+import Layout from "../../layout/Layout.astro";
+import Hero from "../../components/landing/Hero.astro"
+import AboutMe from "../../components/landing/AboutMe.astro";
+import Projects from "../../components/landing/Projects.astro";
+import Contact from "../../components/landing/Contact.astro";
+import Services from "../../components/landing/Services.astro";
+
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const urlEn = getRelativeLocaleUrl("en", "")
+console.log("Hola soy el index en: ", urlEn)
+
+const info = await Astro.glob("../../data/data.json")
+const heroinfo = info[0].Hero
+const aboutinfo = info[0].About
+const serviceinfo = info[0].Services
+const projectsinfo = info[0].Projects
+const contactinfo = info[0].Contact
+const navinfo = info[0].Navbar
+const footerinfo = info[0].Footer
+---
+
+<Layout infoNav={navinfo} infoFooter={footerinfo}>
+	<Hero infoHero={heroinfo}/>
+	<AboutMe aboutInfo={aboutinfo}/>
+	<Services infoService={serviceinfo}/>
+	<Projects infoProjects={projectsinfo}/>
+	<Contact infoContact={contactinfo}/>
+</Layout>

@@ -1,23 +1,28 @@
+---
+const { footerInfo } = Astro.props;
+---
+
 <footer class="w-full h-20 flex flex-row justify-around items-center">
-    <div class="flex flex-row justify-center items-center space-x-4 text-web-orange-400">
-        <i class="fa-solid fa-terminal text-white text-2xl"></i>
-        <p class="text-white font-bold text-2xl">Dario</p>
-    </div>
-    <a href="#" id="downloadLink" class="bg-web-orange-400 w-20 h-10 rounded-xl flex flex-row justify-center items-center font-bold"><i class="fa-solid fa-file-arrow-down pr-2"></i>Mi CV</a>
+  <div
+    class="flex flex-row justify-center items-center space-x-4 text-web-orange-400"
+  >
+    <i class="fa-solid fa-terminal text-white text-2xl"></i>
+    <p class="text-white font-bold text-2xl">Dario</p>
+  </div>
+  <a
+    href={footerInfo.linkCV}
+    target="_blank"
+    class="bg-web-orange-500 text-white w-20 h-10 rounded-xl flex flex-row justify-center items-center font-bold"
+    ><i class="fa-solid fa-file-arrow-down pr-2"></i>CV</a
+  >
 </footer>
 
-<script>
-    document.getElementById("downloadLink").addEventListener("click", function() {
-        window.location.href = "./CV_DARIO_PLAZA_LEON.pdf";
-    });
-</script>
-
 <style>
-    footer {
-        background-color: #14213d;
-    }
+  footer {
+    background-color: #14213d;
+  }
 
-    #downloadLink {
-        color: white;
-    }
+  #downloadLink {
+    color: white;
+  }
 </style>

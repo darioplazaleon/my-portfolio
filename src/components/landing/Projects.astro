@@ -1,11 +1,19 @@
 ---
 import CardProyecto from "../CardProyecto.astro";
+
+const { infoProjects } = Astro.props
+
+const projects = infoProjects.projects
 ---
 
-<section id="projectS" class="w-screen h-screen flex flex-col justify-evenly items-center">
-    <h1 class="text-5xl font-bold text-web-orange-500">// Proyectos</h1>
-    <div class="w-full flex justify-center items-center">
-        <CardProyecto image="/TetrisImage.JPG" urlDemo="https://darioplaza.tech" urlRepo="https://github.com/darioplazaleon/my-portfolio" title="Tetris Demo" description="En este proyecto implementé un juego de Tetris en Python utilizando la biblioteca Pygame como parte de mi práctica y consolidación de conocimientos en Programación Orientada a Objetos (POO)."/>
+<section id="projectS" class="w-screen h-[100rem] lg:h-screen flex flex-col justify-evenly items-center space-y-8">
+    <h1 class="text-5xl font-bold text-web-orange-500">{infoProjects.title}</h1>
+    <div class="w-11/12 flex flex-col lg:flex-row justify-center items-center gap-6">
+        {
+            projects.map((project) => (
+                <CardProyecto infoProjectCard={project}/>
+            ))
+        }
     </div>
 </section>
 
