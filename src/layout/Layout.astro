@@ -2,7 +2,7 @@
 import Navbar from "../components/landing/Navbar.astro";
 import Footer from "../components/landing/Footer.astro";
 
-const { infoFooter, infoNav } = Astro.props
+const { infoFooter, infoNav } = Astro.props;
 ---
 
 <!doctype html>
@@ -46,11 +46,11 @@ const { infoFooter, infoNav } = Astro.props
     />
   </head>
   <body class="custom-gradient">
-    <Navbar infoNavbar={infoNav}/>
+    <Navbar infoNavbar={infoNav} />
     <main class="w-screen">
       <slot />
     </main>
-    <Footer footerInfo={infoFooter}/>
+    <Footer footerInfo={infoFooter} />
   </body>
   <style>
     .custom-gradient {
@@ -65,9 +65,9 @@ const { infoFooter, infoNav } = Astro.props
     }
 
     @media screen and (max-width: 767px) {
-        body {
-            overflow-x: hidden;
-        }
+      body {
+        overflow-x: hidden;
+      }
     }
   </style>
 </html>
