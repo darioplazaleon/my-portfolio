@@ -1,4 +1,5 @@
 ---
+import CardProject from "../CardProject.astro";
 import CardProyecto from "../CardProyecto.astro";
 
 const { infoProjects } = Astro.props
@@ -6,19 +7,14 @@ const { infoProjects } = Astro.props
 const projects = infoProjects.projects
 ---
 
-<section id="projectS" class="w-screen h-[100rem] lg:h-screen flex flex-col justify-evenly items-center space-y-8">
-    <h1 class="text-5xl font-bold text-web-orange-500">{infoProjects.title}</h1>
+<section id="projectS" class="w-screen h-[100rem] lg:h-screen flex flex-col justify-evenly items-center space-y-8 bg-ctp-base">
+    <h1 class="text-5xl font-bold text-ctp-peach">{infoProjects.title}</h1>
     <div class="w-11/12 flex flex-col lg:flex-row justify-center items-center gap-6">
         {
             projects.map((project) => (
-                <CardProyecto infoProjectCard={project}/>
+                <CardProject projectInfo={project}/>
             ))
         }
     </div>
 </section>
 
-<style>
-    #projectS {
-        background-color: #14213d;
-    }
-</style>

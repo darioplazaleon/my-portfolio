@@ -2,26 +2,22 @@
 const { footerInfo } = Astro.props;
 ---
 
-<footer class="w-full h-20 flex flex-row justify-around items-center">
+<footer class="w-full h-20 flex flex-row justify-around items-center bg-ctp-base border-t-2">
   <div
-    class="flex flex-row justify-center items-center space-x-4 text-web-orange-400"
+    class="flex flex-row justify-center items-center space-x-4 text-ctp-peach"
   >
-    <i class="fa-solid fa-terminal text-white text-2xl"></i>
-    <p class="text-white font-bold text-2xl">Dario</p>
+    <i class="fa-solid fa-terminal text-2xl"></i>
+    <p class=" font-bold text-2xl">Dario</p>
   </div>
   <a
     href={footerInfo.linkCV}
     target="_blank"
-    class="bg-web-orange-500 text-white w-20 h-10 rounded-xl flex flex-row justify-center items-center font-bold"
+    class="bg-ctp-peach text-white w-20 h-10 rounded-xl flex flex-row justify-center items-center font-bold"
     ><i class="fa-solid fa-file-arrow-down pr-2"></i>CV</a
   >
 </footer>
 
 <style>
-  footer {
-    background-color: #14213d;
-  }
-
   #downloadLink {
     color: white;
   }

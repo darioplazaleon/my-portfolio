@@ -18,10 +18,29 @@
   ],
   "About": {
     "title": "// Acerca de mí",
+    "linkCV": "https://drive.google.com/file/d/1ZAn_rOgUI0GgLtFB8nvFFkPx2b35gCsI/view?usp=drive_link",
     "menu": {
-      "section1": "Acerca de mí",
+      "section1": "Yo",
       "section2": "Tecnologías",
-      "texts1": "Hola, soy Darío. Mi pasión es la tecnología y el aprendizaje. Desde que era niño, me ha fascinado cómo la tecnología cambia el mundo. Siempre estoy buscando aprender algo nuevo, ya sea desmontando dispositivos o tomando cursos en línea. Creo que el aprendizaje continuo es esencial para el crecimiento. Mi objetivo es seguir explorando el mundo de la tecnología y compartir mis conocimientos con otros entusiastas. ¡Conéctate conmigo si compartes estos intereses!"
+      "section3": "Educacion",
+      "texts1": "Hola, soy Darío. Mi pasión es la tecnología y el aprendizaje. Desde que era niño, me ha fascinado cómo la tecnología cambia el mundo. Siempre estoy buscando aprender algo nuevo, ya sea desmontando dispositivos o tomando cursos en línea. Creo que el aprendizaje continuo es esencial para el crecimiento. Mi objetivo es seguir explorando el mundo de la tecnología y compartir mis conocimientos con otros entusiastas. ¡Conéctate conmigo si compartes estos intereses!",
+      "education": [
+        {
+          "title": "Titulo de bachiller en Economía y Administración",
+          "date": "2015-2020",
+          "institution": "Instituto María Ana Mogas"
+        },
+        {
+          "title": "Certified Tech Developer",
+          "date": "2022-2023",
+          "institution": "Digital House"
+        },
+        {
+          "title": "Diplomatura en Ciencia de Datos e Inteligencia Artificial",
+          "date": "2023-2023",
+          "institution": "Universidad Nacional de General San Martin"
+        }
+      ] 
     }
   },
   "Services": {
@@ -58,14 +77,16 @@
         "description": "En este proyecto, implementé un juego de Tetris en Python utilizando la biblioteca Pygame como parte de mi práctica y consolidación de conocimientos en Programación Orientada a Objetos (OOP).",
         "image": "/images/projects/TetrisImage.JPG",
         "urlRepo": "https://github.com/darioplazaleon/tetris-python.git",
-        "urlDemo": "https://darioplaza.tech"
+        "urlDemo": "https://darioplaza.tech",
+        "label": ["Python", "PyGame"]
       },
       {
         "title":"Lol App",
-        "description": "Desarrollé un proyecto utilizando la API de Riot Games con el propósito de demostrar mi habilidad para trabajar con APIs. Esta aplicación demuestra cómo integrar y manejar datos de la API de Riot Games, para crear una plataforma que aproveche los datos proporcionados.",
+        "description": "Desarrollé un proyecto utilizando la API de Riot Games para demostrar mi habilidad para trabajar con APIs. Esta aplicación demuestra cómo manejar datos de la API de Riot Games",
         "image": "/images/projects/LolApp.JPG",
         "urlRepo": "https://github.com/darioplazaleon/tetris-python.git",
-        "urlDemo": "https://darioplaza.tech"
+        "urlDemo": "https://darioplaza.tech",
+        "label": ["React", "NextJS"]
       }
     ]
   },

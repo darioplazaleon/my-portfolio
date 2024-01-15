@@ -1,0 +1,25 @@
+---
+const { projectInfo } = Astro.props
+
+console.log("Hola soy el proyecto: ", projectInfo)
+---
+
+<div class="border border-ctp-red bg-ctp-crust w-full lg:w-[28rem] h-[28rem] rounded-xl flex flex-col">
+  <img
+    src={projectInfo.image}
+    alt="Foto de proyecto"
+    class="w-full h-3/6 rounded-t-xl"
+  />
+  <div class="h-3/6 flex flex-col justify-center space-y-4 mx-3 my-2">
+    <p class="text-ctp-red font-bold">{projectInfo.title}</p>
+    <p class="text-white">
+      {projectInfo.description}
+    </p>
+    <div class="flex flex-row space-x-2">
+			{projectInfo.label.map((label, index) => (
+				<p class="bg-white w-fit px-2 rounded-full">{label}</p>
+			))}
+
+    </div>
+  </div>
+</div>

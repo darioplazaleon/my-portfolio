@@ -129,7 +129,7 @@ const {infoHero} = Astro.props
     </div>
     <div class="relative mb-56 text-black h-3/4 flex flex-col justify-center items-center space-y-4 lg:mb-32">
         <p class="text-3xl lg:text-4xl text-center text-white" data-en="Hi!, i'm" data-es="¡Hola!, soy" id="heroGreeting">{infoHero[0].introduction}</p>
-        <span class="text-7xl lg:text-9xl font-bold text-center text-web-orange-500">{infoHero[0].name}</span>
+        <h1 class="text-7xl lg:text-9xl font-bold text-center text-ctp-peach">{infoHero[0].name}</h1>
         <AnimatedText text={infoHero[0].profession}/>
         <div class="flex space-x-4 text-white text-3xl z-10">
             <a href="https://www.linkedin.com/in/dario-plaza/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -142,7 +142,7 @@ const {infoHero} = Astro.props
 
 <style>
     #hero {
-        background: linear-gradient(to bottom, #000000, #14213d);
+        background: linear-gradient(to bottom, #11111b, #1e1e2e);
         color: #ffffff;
         position: relative;
     }

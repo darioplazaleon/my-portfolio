@@ -18,12 +18,32 @@
   ],
   "About": {
     "title": "// About Me",
+    "linkCV": "https://drive.google.com/file/d/1z2y-OJAwlM-LxVftuu3g8940E8xpJclZ/view?usp=drive_link",
     "menu": {
-      "section1": "About Me",
+      "section1": "Me",
       "section2": "Technologies",
-      "texts1": "Hi, I'm Dario. My passion is technology and learning. Since I was a child, I've been fascinated by how technology changes the world. I'm always seeking to learn something new, whether it's disassembling devices or taking online courses. I believe that continuous learning is essential for growth. My goal is to continue exploring the world of technology and sharing my knowledge with other enthusiasts. Connect with me if you share these interests!"
+      "section3": "Education",
+      "texts1": "Hi, I'm Dario. My passion is technology and learning. Since I was a child, I've been fascinated by how technology changes the world. I'm always seeking to learn something new, whether it's disassembling devices or taking online courses. I believe that continuous learning is essential for growth. My goal is to continue exploring the world of technology and sharing my knowledge with other enthusiasts. Connect with me if you share these interests!",
+      "education": [
+        {
+          "title": "Bachelor's Degree in Economics and Administration",
+          "date": "2015-2020",
+          "institution": "Instituto María Ana Mogas"
+        },
+        {
+          "title": "Certified Tech Developer",
+          "date": "2022-2023",
+          "institution": "Digital House"
+        },
+        {
+          "title": "Diploma in Data Science and Artificial Intelligence",
+          "date": "2023-2023",
+          "institution": "Universidad Nacional de General San Martin"
+        }
+      ] 
+      } 
     }
-  },
+  ,
   "Services": {
     "title": "// Services",
     "more": "And many more...",
@@ -58,14 +78,16 @@
         "description": "In this project, I implemented a Tetris game in Python using the Pygame library as part of my practice and consolidation of knowledge in Object-Oriented Programming (OOP).",
         "image": "/images/projects/TetrisImage.JPG",
         "urlRepo": "https://github.com/darioplazaleon/tetris-python.git",
-        "urlDemo": "https://darioplaza.tech"
+        "urlDemo": "https://darioplaza.tech",
+        "label": ["Python", "PyGame"]
       },
       {
         "title": "D.GG",
         "description": "I developed a project using the Riot Games API to showcase my ability to work with APIs. This application demonstrates how to integrate and manage data from the Riot Games API to create a platform that leverages the provided data.",
         "image": "/images/projects/LolApp.JPG",
         "urlRepo": "https://github.com/darioplazaleon/d.gg",
-        "urlDemo": "https://d-gg.vercel.app/"
+        "urlDemo": "https://d-gg.vercel.app/",
+        "label": ["React", "NextJS"]
       }
     ]
   },

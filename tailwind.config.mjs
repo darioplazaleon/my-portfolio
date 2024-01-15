@@ -19,10 +19,17 @@ export default {
           900: "#7b330c",
           950: "#471901",
         },
+        fontFamily: {
+          'sans': ['Work Sans', 'sans-serif']
+        }
       },
     },
   },
   plugins: [
-    addDynamicIconSelectors()
+    addDynamicIconSelectors(),
+    require("@catppuccin/tailwindcss")({
+      prefix: "ctp",
+      defaultFlavour: "mocha"
+    })
   ],
 };
