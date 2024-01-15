@@ -6,7 +6,7 @@ const { aboutInfo } = Astro.props;
 
 <section
   id="aboutMe"
-  class="space-y-20 flex flex-col justify-center w-screen items-center h-screen bg-ctp-base"
+  class="flex flex-col justify-center w-screen items-center h-screen bg-ctp-base"
 >
   <h1 class="text-ctp-peach font-bold text-5xl">{aboutInfo.title}</h1>
   <div
@@ -18,7 +18,7 @@ const { aboutInfo } = Astro.props;
       <a
         href={aboutInfo.linkCV}
         target="_blank"
-        class="bg-ctp-peach text-black w-20 h-10 rounded-xl flex flex-row justify-center items-center font-bold"
+        class="bg-ctp-peach text-white w-20 h-10 rounded-xl flex flex-row justify-center items-center font-bold"
         ><i class="fa-solid fa-file-arrow-down pr-2"></i>CV</a
       >
     </div>

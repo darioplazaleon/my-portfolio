@@ -12,12 +12,6 @@ console.log(infoNavbar[0].aboutme)
             <i class="fa-solid fa-terminal text-2xl"></i>
             <p class="font-bold text-2xl">Dario</p>
         </div>
-        <div class="lg:hidden block">
-            <!-- Botón para abrir el menú en dispositivos móviles -->
-            <button id="mobile-menu-button-icon" class="text-white text-2xl">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
         <ul class="hidden lg:flex flex-row items-center space-x-6 text-white font-bold underline underline-offset-8">
             <li><a href="#aboutMe" id="aboutme" data-en="About Me" data-es="Sobre mí">{infoNavbar[0].aboutme}</a></li>
             <li><a href="#projectS" id="projects" data-en="Projects" data-es="Proyectos">{infoNavbar[0].proyects}</a></li>
@@ -28,19 +22,7 @@ console.log(infoNavbar[0].aboutme)
             <LanguageChange linkButton={infoNavbar[0].button} buttonText={infoNavbar[0].buttonText}/>
         </div>
         <!-- NAVBAR EN MOBILE -->
-        <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-screen bg-white shadow z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
-            <ul class="flex flex-col items-center space-y-20 text-black font-bold underline underline-offset-8 text-3xl mt-32">
-                <!-- Botón para cerrar el menú -->
-                <li>
-                    <button id="close-mobile-menu-button" class="text-black text-3xl">
-                        <i class="fa-solid fa-times"></i>
-                    </button>
-                </li>
-                <li><a href="#aboutMe" id="aboutme-mobile" data-en="About Me" data-es="Sobre mí">Sobre mi</a></li>
-                <li><a href="#projectS" id="projects-mobile" data-en="Projects" data-es="Proyectos">Proyectos</a></li>
-                <li><a href="#contacT" id="contact-mobile" data-en="Contact" data-es="Contacto">Contacto</a></li>
-            </ul>
-        </div>
+        
     </nav>
 </header>
 
@@ -54,42 +36,4 @@ console.log(infoNavbar[0].aboutme)
     }
 </style>
 
-<script>
-    // JavaScript para mostrar/ocultar el menú desplegable y cambiar el icono
-    const mobileMenuButtonIcon = document.getElementById("mobile-menu-button-icon");
-    const closeMobileMenuButton = document.getElementById("close-mobile-menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const body = document.body;
-
-    mobileMenuButtonIcon.addEventListener("click", function () {
-        mobileMenu.classList.toggle("translate-x-full");
-        mobileMenu.classList.remove("hidden")
-        body.classList.toggle("overflow-hidden");
-    });
-
-    closeMobileMenuButton.addEventListener("click", function () {
-        mobileMenu.classList.toggle("translate-x-full");
-        mobileMenu.classList.add("hidden")
-        body.classList.toggle("overflow-hidden");
-    });
-
-    // Cerrar el menú y desplazarse a la sección correspondiente al hacer clic en una opción
-    const menuLinks = document.querySelectorAll("#mobile-menu a");
-
-    menuLinks.forEach(link => {
-    link.addEventListener("click", function (e) {
-        mobileMenu.classList.toggle("translate-x-full");
-        mobileMenu.classList.add("hidden")
-        body.classList.remove("overflow-hidden");
-        e.preventDefault();
-
-        const targetId = this.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: "smooth" });
-        }
-    });
-});
-</script>
 

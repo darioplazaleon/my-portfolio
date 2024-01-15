@@ -7,7 +7,7 @@ const { infoProjects } = Astro.props
 const projects = infoProjects.projects
 ---
 
-<section id="projectS" class="w-screen h-[100rem] lg:h-screen flex flex-col justify-evenly items-center space-y-8 bg-ctp-base">
+<section id="projectS" class="w-screen h-min-fit py-10 lg:py-0 lg:justify-evenly lg:h-screen flex flex-col space-y-16 items-center bg-ctp-base">
     <h1 class="text-5xl font-bold text-ctp-peach">{infoProjects.title}</h1>
     <div class="w-11/12 flex flex-col lg:flex-row justify-center items-center gap-6">
         {

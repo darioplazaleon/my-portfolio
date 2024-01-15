@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/landing/Navbar.astro";
 import Footer from "../components/landing/Footer.astro";
+import "../styles/layout.css";
 
 const { infoFooter, infoNav } = Astro.props;
 ---
@@ -53,6 +54,12 @@ const { infoFooter, infoNav } = Astro.props;
     <Footer footerInfo={infoFooter} />
   </body>
   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,500&display=swap");
+
+    * {
+      font-family: "Work Sans", sans-serif;
+    }
+
     .custom-gradient {
       background-color: #11111b;
       width: 100%;

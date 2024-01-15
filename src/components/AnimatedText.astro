@@ -1,47 +1,48 @@
 ---
-const {textAnimated} = Astro.props
+const { textAnimated } = Astro.props;
 ---
+
 <div class="text-container">
-    <p class="text-ctp-peach w-fit pr-2 pl-2 text-3xl font-semibold typing-animation" id="animatedText">{textAnimated}</p>
+  <p
+    class="text-ctp-peach text-3xl font-semibold typed-out"
+    id="animatedText"
+  >
+    {textAnimated}
+  </p>
 </div>
 
 <style>
-    .text-container {
-            overflow: hidden;
-            white-space: nowrap;
-        }
+  .text-container {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+  }
 
-        .typing-animation {
-            border-right: 2px solid white;
-            animation: typing 3s steps(30) 1s 1 normal both;
-        }
+  .typed-out {
+    overflow: hidden;
+    border-right: .15em solid #fab387;
+    white-space: nowrap;
+    animation: typing 2.5s steps(50, end) forwards, blink .8s infinite;
+    width: 0;
+  }
 
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-        to {
-            width: fit-content;
-        }
+  @keyframes typing {
+    from {
+      width: 0;
     }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: #fab387;
+    }
+  }
 </style>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const textElement = document.getElementById('animatedText');
-        const text = "Desarrollador Fullstack";
-        let index = 0;
 
-        function addLetter() {
-            textElement.textContent += text[index];
-            index++;
-
-            if (index === text.length) {
-                clearInterval(timer);
-                textElement.classList.remove('typing-animation')
-            }
-        }
-
-        const timer = setInterval(addLetter, 100);
-    });
-</script>
