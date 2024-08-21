@@ -1,0 +1,31 @@
+---
+let greetings = [
+    { text: 'Hola', emoji: '👋' },
+    { text: 'Hello', emoji: '👋' },
+    { text: 'Bonjour', emoji: '👋' },
+    { text: 'Hallo', emoji: '👋' },
+    // Agrega más saludos en diferentes idiomas aquí
+];
+let index = 0;
+---
+
+<div id="animated-text" class="text-white bg-black w-screen h-screen flex items-center overflow-hidden justify-center">
+    <p>{greetings[index].text} {greetings[index].emoji}</p>
+    <!-- <p>HOLA</p> -->
+</div>
+
+<script is:inline>
+    let index = 0;
+    const greetings = JSON.stringify(greetings);
+    const animatedText = document.querySelector('#animated-text');
+    const interval = setInterval(() => {
+        index++;
+        if (index >= greetings.length) {
+            animatedText.remove();
+            clearInterval(interval);
+        } else {
+            animatedText.textContent = `${greetings[index].text} ${greetings[index].emoji}`;
+        }
+    }, 2000);
+</script>
+
