@@ -1,0 +1,14 @@
+---
+import TechCarousel from "../TechCarousel";
+
+const { techInfo } = Astro.props;
+
+const techs = techInfo.technologies;
+---
+
+<section class="h-96 w-full">
+  <h1 class="text-ctp-peach text-center text-5xl">{techInfo.title}</h1>
+  <div class="h-60 w-full justify-center">
+    <TechCarousel techs={techs} client:load />
+  </div>
+</section>

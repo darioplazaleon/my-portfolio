@@ -52,7 +52,7 @@ const Greeting = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <motion.p
-                        className="text-white text-2xl"
+                        className="text-white text-3xl"
                         initial={{ opacity: 1 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: interval / 1000 }}
