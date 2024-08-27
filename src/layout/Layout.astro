@@ -2,8 +2,6 @@
 import Navbar from "../components/landing/Navbar.astro";
 import Footer from "../components/landing/Footer.astro";
 import "../styles/layout.css";
-import Greeting from "../components/GreetingsReact";
-import { Tooltips } from "astro-tooltips";
 
 const { infoFooter, infoNav } = Astro.props;
 ---
@@ -51,7 +49,6 @@ const { infoFooter, infoNav } = Astro.props;
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
-    <Tooltips interactive={false} delay={[15, 14000]} />
   </head>
   <body class="custom-gradient">
     <!-- <Greeting client:load/> -->

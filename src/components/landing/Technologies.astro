@@ -52,12 +52,36 @@ const techs = techInfo.technologies;
       s.moveToIdx(s.track.details.abs + 5, true, animation);
     },
     breakpoints: {
-      '(max-width: 768px)': {
+      "(max-width: 640px)": {
         slides: {
           perView: 3,
           spacing: 10,
         },
       },
-    }
+      "(min-width: 768px)": {
+        slides: {
+          perView: 5,
+          spacing: 10,
+        },
+      },
+      "(min-width: 1024px)": {
+        slides: {
+          perView: 6,
+          spacing: 10,
+        },
+      },
+      "(min-width: 1280px)": {
+        slides: {
+          perView: 7,
+          spacing: 10,
+        },
+      },
+      "(min-width: 1536px)": {
+        slides: {
+          perView: 8,
+          spacing: 10,
+        },
+      },
+    },
   });
 </script>
