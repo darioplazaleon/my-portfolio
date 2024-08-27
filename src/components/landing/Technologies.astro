@@ -1,14 +1,63 @@
 ---
-import TechCarousel from "../TechCarousel";
-
 const { techInfo } = Astro.props;
 
 const techs = techInfo.technologies;
 ---
 
-<section class="h-96 w-full">
+<section class="h-96 w-full flex flex-col justify-around bg-ctp-crust">
   <h1 class="text-ctp-peach text-center text-5xl">{techInfo.title}</h1>
-  <div class="h-60 w-full justify-center">
-    <TechCarousel techs={techs} client:load />
+  <p class="text-center text-white font-bold text-xl">
+    A lo largo de mi carrera, he dominado diversas tecnologías clave para
+    desarrollar soluciones innovadoras y eficientes. <br /> Descubre las herramientas
+    que utilizo para llevar cada proyecto al siguiente nivel.
+  </p>
+
+  <div class="relative w-full h-52">
+    <div
+      class="absolute inset-0 z-20 before:absolute before:left-0 before:top-0 before:w-1/4 before:h-full before:bg-gradient-to-r before:from-ctp-crust before:to-transparent before:filter before:blur-3 after:absolute after:right-0 after:top-0 after:w-1/4 after:h-full after:bg-gradient-to-l after:from-ctp-crust after:to-transparent after:filter after:blur-3"
+    >
+    </div>
+    <div class="h-52 w-full flex pt-10 keen-slider" id="my-keen-slider">
+      {
+        techs.map((tech, index) => (
+          <div class={`keen-slider__slide number-slide${index + 1}`}>
+            <img src={tech.image} alt={tech.name} class="w-20" />
+          </div>
+        ))
+      }
+    </div>
   </div>
 </section>
+
+<script>
+  import KenSlider from "keen-slider";
+
+  var animation = { duration: 5000, easing: (t) => t };
+
+  var slider = new KenSlider("#my-keen-slider", {
+    slides: {
+      perView: 7,
+      spacing: 10,
+    },
+    loop: true,
+    renderMode: "performance",
+    drag: false,
+    created(s) {
+      s.moveToIdx(5, true, animation);
+    },
+    updated(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+    animationEnded(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+    breakpoints: {
+      '(max-width: 768px)': {
+        slides: {
+          perView: 3,
+          spacing: 10,
+        },
+      },
+    }
+  });
+</script>
