@@ -5,11 +5,18 @@ const techs = techInfo.technologies;
 ---
 
 <section class="h-96 w-full flex flex-col justify-around bg-ctp-crust">
-  <h1 class="text-ctp-peach text-center text-5xl">{techInfo.title}</h1>
-  <p class="text-center text-white font-bold text-xl">
-    A lo largo de mi carrera, he dominado diversas tecnologías clave para
-    desarrollar soluciones innovadoras y eficientes. <br /> Descubre las herramientas
-    que utilizo para llevar cada proyecto al siguiente nivel.
+  <h1 class="text-[#df8e1d] text-center font-bold text-5xl pb-4">
+    {techInfo.title}
+  </h1>
+  <p
+    class="text-center text-white font-semibold text-3xl sm:text-xl md:text-2xl lg:text-4xl"
+  >
+    He dominado diversas <span class="text-[#cba6f7]">tecnologías clave</span> para
+    desarrollar soluciones
+    <span class="text-[#89b4fa]">innovadoras y eficientes.</span>
+    <br /> Descubre las herramientas que utilizo para llevar cada proyecto al <span
+      class="text-[#f9e2af]">siguiente nivel</span
+    >.
   </p>
 
   <div class="relative w-full h-52">
@@ -37,7 +44,7 @@ const techs = techInfo.technologies;
   var slider = new KenSlider("#my-keen-slider", {
     slides: {
       perView: 7,
-      spacing: 10,
+      spacing: 5,
     },
     loop: true,
     renderMode: "performance",
@@ -55,31 +62,31 @@ const techs = techInfo.technologies;
       "(max-width: 640px)": {
         slides: {
           perView: 3,
-          spacing: 10,
+          spacing: 5,
         },
       },
       "(min-width: 768px)": {
         slides: {
           perView: 5,
-          spacing: 10,
+          spacing: 5,
         },
       },
       "(min-width: 1024px)": {
         slides: {
           perView: 6,
-          spacing: 10,
+          spacing: 5,
         },
       },
       "(min-width: 1280px)": {
         slides: {
           perView: 7,
-          spacing: 10,
+          spacing: 5,
         },
       },
       "(min-width: 1536px)": {
         slides: {
           perView: 8,
-          spacing: 10,
+          spacing: 5,
         },
       },
     },
