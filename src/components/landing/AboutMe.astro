@@ -6,14 +6,18 @@ console.log(aboutInfo);
 
 <section
   id="aboutMe"
-  class="flex flex-col justify-center w-screen items-center h-screen bg-ctp-base"
+  class="flex flex-col lg:flex-row justify-center w-screen items-center h-screen bg-ctp-base"
 >
-  <div class="w-11/12 text-center flex flex-col gap-5">
-    <div class="flex flex-col">
-      <h1 class="font-bold text-ctp-peach text-4xl">Sobre mi 👋</h1>
-      <p class="text-white">Mi pasion por crear nunca termina</p>
+  <div class="w-11/12 lg:w-4/6 text-center flex flex-col gap-5 px-2 lg:ml-10 lg:h-90">
+    <div class="flex flex-col lg:text-start  lg:pb-10">
+      <h1 class="font-bold text-ctp-peach text-4xl sm:text-5xl lg:text-6xl">
+        Sobre mi 👋
+      </h1>
+      <p class="text-white font-semibold sm:text-xl lg:text-2xl">
+        Mi pasion por crear nunca termina
+      </p>
     </div>
-    <p class="text-white py-4" id="textMe">
+    <p class="text-white py-4 sm:text-xl lg:text-2xl w-full" id="textMe">
       Soy <span class="underline underline-offset-2"
         >Dario Alessandro Plaza Leon</span
       >, mis dos mayores caracteristicas son la sinceridad y la pasion que le
@@ -22,13 +26,16 @@ console.log(aboutInfo);
       ambito laboral o personal. Mi pasion por la tecnologia y la programacion
       siempre me lleva a querer aprender mas y mas.
     </p>
+    <div>
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+    </div>
   </div>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center  lg:w-2/6">
     <img src="./magic2.png" alt="" class="w-full" />
     <button class="bg-ctp-peach w-40 h-12 rounded-lg"
-      ><a href={aboutInfo.linkCV}
-        >Descargar CV</a
-      >
+      ><a href={aboutInfo.linkCV}>Descargar CV</a>
     </button>
   </div>
 </section>
