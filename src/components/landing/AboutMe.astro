@@ -1,28 +1,35 @@
 ---
-import MenuMe from "../MenuMe.jsx";
-
 const { aboutInfo } = Astro.props;
+
+console.log(aboutInfo);
 ---
 
 <section
   id="aboutMe"
   class="flex flex-col justify-center w-screen items-center h-screen bg-ctp-base"
 >
-  <h1 class="text-ctp-peach font-bold text-5xl">{aboutInfo.title}</h1>
-  <div
-    class="flex flex-col items-center w-full lg:justify-center lg:h-4/6 lg:flex-row"
-    id="menuContainer"
-  >
-    <div class="flex flex-col items-center w-full lg:w-2/6">
-      <img src="./magic2.png" alt="" class="w-full" />
-      <a
-        href={aboutInfo.linkCV}
-        target="_blank"
-        class="bg-ctp-peach text-white w-20 h-10 rounded-xl flex flex-row justify-center items-center font-bold"
-        ><i class="fa-solid fa-file-arrow-down pr-2"></i>CV</a
-      >
+  <div class="w-11/12 text-center flex flex-col gap-5">
+    <div class="flex flex-col">
+      <h1 class="font-bold text-ctp-peach text-4xl">Sobre mi 👋</h1>
+      <p class="text-white">Mi pasion por crear nunca termina</p>
     </div>
-    <MenuMe infoMenu={aboutInfo.menu} client:load />
+    <p class="text-white py-4" id="textMe">
+      Soy <span class="underline underline-offset-2"
+        >Dario Alessandro Plaza Leon</span
+      >, mis dos mayores caracteristicas son la sinceridad y la pasion que le
+      dedico a lo que me gusta. Ademas de estas dos caracteristicas, soy una
+      persona que siempre esta dispuesta a ayudar a los demas, ya sea en el
+      ambito laboral o personal. Mi pasion por la tecnologia y la programacion
+      siempre me lleva a querer aprender mas y mas.
+    </p>
+  </div>
+  <div class="flex flex-col items-center">
+    <img src="./magic2.png" alt="" class="w-full" />
+    <button class="bg-ctp-peach w-40 h-12 rounded-lg"
+      ><a href={aboutInfo.linkCV}
+        >Descargar CV</a
+      >
+    </button>
   </div>
 </section>
 
@@ -31,5 +38,29 @@ const { aboutInfo } = Astro.props;
     #aboutMe {
       height: 1100px;
     }
+  }
+
+  #textMe {
+    position: relative;
+  }
+
+  #textMe::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #fab387;
+  }
+
+  #textMe::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #fab387;
   }
 </style>

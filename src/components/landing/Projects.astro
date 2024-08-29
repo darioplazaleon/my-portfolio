@@ -1,6 +1,5 @@
 ---
 import CardProject from "../card/CardProject.astro";
-import CardProyecto from "../card/CardProyecto.astro";
 
 const { infoProjects } = Astro.props;
 
@@ -9,7 +8,7 @@ const projects = infoProjects.projects;
 
 <section
   id="projectS"
-  class="w-screen h-min-fit py-10 lg:py-0 lg:justify-evenly lg:h-screen flex flex-col space-y-16 items-center bg-gradient-to-b from-ctp-base to-ctp-crust"
+  class="w-screen h-screen py-10 lg:py-0 lg:justify-evenly lg:h-screen flex flex-col space-y-16 items-center bg-gradient-to-b from-ctp-base to-ctp-crust"
 >
   <h1 class="text-5xl font-bold text-ctp-peach">{infoProjects.title}</h1>
   <div
@@ -17,4 +16,7 @@ const projects = infoProjects.projects;
   >
     {projects.map((project) => <CardProject projectInfo={project} />)}
   </div>
+  <button class="bg-ctp-peach w-48 h-12 rounded-xl">
+    <a href="/projects" class="text-[#0A1829]">Mas proyectos...</a>
+  </button>
 </section>
