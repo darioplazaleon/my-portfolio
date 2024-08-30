@@ -8,8 +8,10 @@ console.log(aboutInfo);
   id="aboutMe"
   class="flex flex-col lg:flex-row justify-center w-screen items-center h-screen bg-ctp-base"
 >
-  <div class="w-11/12 lg:w-4/6 text-center flex flex-col gap-5 px-2 lg:ml-10 lg:h-90">
-    <div class="flex flex-col lg:text-start  lg:pb-10">
+  <div
+    class="w-11/12 lg:w-4/6 text-center flex flex-col gap-5 px-2 lg:ml-10 lg:h-90"
+  >
+    <div class="flex flex-col lg:text-start lg:pb-10">
       <h1 class="font-bold text-ctp-peach text-4xl sm:text-5xl lg:text-6xl">
         Sobre mi 👋
       </h1>
@@ -26,13 +28,19 @@ console.log(aboutInfo);
       ambito laboral o personal. Mi pasion por la tecnologia y la programacion
       siempre me lleva a querer aprender mas y mas.
     </p>
-    <div>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
+    <div class="flex gap-10 justify-center  text-4xl text-ctp-mauve">
+      <a href="https://www.linkedin.com/in/dario-plaza/" target="_blank"
+        ><i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/darioplazaleon" target="_blank"
+        ><i class="fa-brands fa-square-github"></i>
+      </a>
+      <a href="mailto:darioplaza02@hotmail.com" target="_blank"
+        ><i class="fa-solid fa-square-envelope"></i>
+      </a>
     </div>
   </div>
-  <div class="flex flex-col items-center  lg:w-2/6">
+  <div class="flex flex-col items-center lg:w-2/6">
     <img src="./magic2.png" alt="" class="w-full" />
     <button class="bg-ctp-peach w-40 h-12 rounded-lg"
       ><a href={aboutInfo.linkCV}>Descargar CV</a>

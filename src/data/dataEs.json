@@ -40,7 +40,7 @@
           "date": "2023-2023",
           "institution": "Universidad Nacional de General San Martin"
         }
-      ] 
+      ]
     }
   },
   "Services": {
@@ -81,12 +81,20 @@
         "label": ["Python", "PyGame"]
       },
       {
-        "title":"Lol App",
+        "title": "Lol App",
         "description": "Desarrollé un proyecto utilizando la API de Riot Games para demostrar mi habilidad para trabajar con APIs. Esta aplicación demuestra cómo manejar datos de la API de Riot Games",
         "image": "/images/projects/LolApp.JPG",
         "urlRepo": "https://github.com/darioplazaleon/tetris-python.git",
         "urlDemo": "https://darioplaza.tech",
         "label": ["React", "NextJS"]
+      },
+      {
+        "title": "Fruit Market",
+        "description": "Aplicacion desarrollada en Android Studio que simula un mercado de frutas. La aplicacion permite agregar frutas al carrito de compras y ver el total de la compra.",
+        "image": "/images/projects/TetrisImage.JPG",
+        "urlRepo": "https://github.com/darioplazaleon/FruitApp-Compose",
+        "urlDemo": "",
+        "label": ["Kotlin", "Compose"]
       }
     ]
   },
