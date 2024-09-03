@@ -2,19 +2,75 @@
 const { footerInfo } = Astro.props;
 ---
 
-<footer class="w-full h-20 flex flex-row justify-around items-center bg-ctp-base border-t-2">
-  <div
-    class="flex flex-row justify-center items-center space-x-4 text-ctp-peach"
-  >
-    <i class="fa-solid fa-terminal text-2xl"></i>
-    <p class=" font-bold text-2xl">Dario</p>
+<footer class="w-full h-auto flex flex-col items-center bg-ctp-base border-t-2">
+  <div class="flex flex-col w-full items-center sm:flex-row sm:w-11/12">
+    <div class="flex w-full justify-around my-5 lg:text-xl">
+      <div class="flex flex-col gap-3 text-ctp-mauve">
+        <p class="text-ctp-peach underline font-bold">Social Media</p>
+        <a
+          href="https://www.linkedin.com/in/dario-plaza/"
+          target="_blank"
+          class="flex items-center gap-2"
+          ><i class="fa-brands fa-linkedin text-3xl"></i> Linkedin
+        </a>
+        <a
+          href="https://github.com/darioplazaleon"
+          target="_blank"
+          class="flex items-center gap-2"
+          ><i class="fa-brands fa-square-github text-3xl"></i>GitHub
+        </a>
+        <a
+          href="discordapp.com/users/295518729230352384"
+          target="_blank"
+          class="flex items-center gap-2"
+          ><i class="fa-brands fa-discord text-2xl"></i>Discord
+        </a>
+      </div>
+      <div class="flex flex-col gap-2">
+        <p class="text-ctp-mauve underline font-bold">Explorar</p>
+        <ul class="text-ctp-peach flex flex-col gap-2">
+          <li><a href="">Home</a></li>
+          <li><a href="">Sobre mi</a></li>
+          <li><a href="">Proyectos</a></li>
+          <li><a href="">Servicios</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col items-center gap-8">
+      <div class="flex rounded-xl w-48 h-20 border-ctp-mauve border-4">
+        <div class="w-4/6 h-full flex flex-col justify-center">
+          <p class="text-center font-bold text-ctp-peach">Contacto</p>
+          <p class="text-center text-ctp-text">¡Di Hola!</p>
+        </div>
+        <button class="w-2/6 flex items-center justify-center">
+          <a href=""><i class="fa-solid fa-arrow-right text-ctp-peach"></i></a>
+        </button>
+      </div>
+      <a
+        href={footerInfo.linkCV}
+        target="_blank"
+        class="bg-ctp-peach text-white w-20 lg:w-28 lg:h-12 h-10 rounded-xl flex flex-row justify-center items-center font-bold"
+        ><i class="fa-solid fa-file-arrow-down pr-2"></i>CV</a
+      >
+    </div>
   </div>
-  <a
-    href={footerInfo.linkCV}
-    target="_blank"
-    class="bg-ctp-peach text-white w-20 h-10 rounded-xl flex flex-row justify-center items-center font-bold"
-    ><i class="fa-solid fa-file-arrow-down pr-2"></i>CV</a
+
+  <div class="flex flex-col-reverse w-11/12 items-center gap-10 mt-5">
+    <div
+      class="flex flex-row justify-center items-center space-x-4 text-ctp-peach"
+    >
+      <i class="fa-solid fa-terminal text-2xl"></i>
+      <p class="font-bold text-5xl">Dario</p>
+    </div>
+  </div>
+  <a href="" class="text-ctp-text mt-3"
+    >Contactame: <span class="font-bold underline"
+      >darioalessandrop@gmail.com</span
+    ></a
   >
+  <p class="text-center text-gray-500 text-xs bg-ctp-crust w-full mt-2">
+    &copy; 2024 Dario. Todos los derechos reservados.
+  </p>
 </footer>
 
 <style>
