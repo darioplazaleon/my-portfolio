@@ -1,12 +1,15 @@
 ---
 const { footerInfo } = Astro.props;
+
+const explorer = footerInfo.menu
+const contact = footerInfo.contact
 ---
 
 <footer class="w-full h-auto flex flex-col items-center bg-ctp-base border-t-2">
   <div class="flex flex-col w-full items-center sm:flex-row sm:w-11/12">
     <div class="flex w-full justify-around my-5 lg:text-xl">
       <div class="flex flex-col gap-3 text-ctp-mauve">
-        <p class="text-ctp-peach underline font-bold">Social Media</p>
+        <p class="text-ctp-peach underline font-bold">{footerInfo.socialTitle}</p>
         <a
           href="https://www.linkedin.com/in/dario-plaza/"
           target="_blank"
@@ -27,20 +30,20 @@ const { footerInfo } = Astro.props;
         </a>
       </div>
       <div class="flex flex-col gap-2">
-        <p class="text-ctp-mauve underline font-bold">Explorar</p>
+        <p class="text-ctp-mauve underline font-bold">{explorer.title}</p>
         <ul class="text-ctp-peach flex flex-col gap-2">
-          <li><a href="">Home</a></li>
-          <li><a href="">Sobre mi</a></li>
-          <li><a href="">Proyectos</a></li>
-          <li><a href="">Servicios</a></li>
+          <li><a href="">{explorer.home}</a></li>
+          <li><a href="">{explorer.aboutMe}</a></li>
+          <li><a href="">{explorer.projects}</a></li>
+          <li><a href="">{explorer.services}</a></li>
         </ul>
       </div>
     </div>
     <div class="flex flex-col items-center gap-8">
       <div class="flex rounded-xl w-48 h-20 border-ctp-mauve border-4">
         <div class="w-4/6 h-full flex flex-col justify-center">
-          <p class="text-center font-bold text-ctp-peach">Contacto</p>
-          <p class="text-center text-ctp-text">¡Di Hola!</p>
+          <p class="text-center font-bold text-ctp-peach">{contact.title}</p>
+          <p class="text-center text-ctp-text">{contact.phrase}</p>
         </div>
         <button class="w-2/6 flex items-center justify-center">
           <a href=""><i class="fa-solid fa-arrow-right text-ctp-peach"></i></a>
@@ -64,7 +67,7 @@ const { footerInfo } = Astro.props;
     </div>
   </div>
   <a href="" class="text-ctp-text mt-3"
-    >Contactame: <span class="font-bold underline"
+    >{contact.email} <span class="font-bold underline"
       >darioalessandrop@gmail.com</span
     ></a
   >

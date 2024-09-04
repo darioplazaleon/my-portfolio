@@ -17,13 +17,10 @@
     }
   ],
   "About": {
-    "title": "// About Me",
-    "linkCV": "https://drive.google.com/file/d/1z2y-OJAwlM-LxVftuu3g8940E8xpJclZ/view?usp=drive_link",
+    "title": "About Me 👋",
+    "linkCV": "https://drive.google.com/file/d/1z2y-OJAwlM-LxVftuu3g8940E8xpJclZ/view?usp=sharing",
     "menu": {
-      "section1": "Me",
-      "section2": "Technologies",
-      "section3": "Education",
-      "texts1": "Hi, I'm Dario. My passion is technology and learning. Since I was a child, I've been fascinated by how technology changes the world. I'm always seeking to learn something new, whether it's disassembling devices or taking online courses. I believe that continuous learning is essential for growth. My goal is to continue exploring the world of technology and sharing my knowledge with other enthusiasts. Connect with me if you share these interests!",
+      "aboutMe": ["I am ", "Dario Alessandro Plaza Leon", "my two greatest characteristics are the sincerity and the passion that I dedicate to what I like. In addition to these two characteristics, I am a person who is always willing to help others, whether in the workplace or personally. My passion for technology and programming always leads me to want to learn more and more."],
       "education": [
         {
           "title": "Bachelor's Degree in Economics and Administration",
@@ -71,7 +68,8 @@
     ]
   },
   "Projects": {
-    "title": "// Projects",
+    "title": "📂 Projects",
+    "moreButton": "More Projects",
     "projects": [
       {
         "title": "Tetris Demo",
@@ -82,12 +80,20 @@
         "label": ["Python", "PyGame"]
       },
       {
-        "title": "D.GG",
+        "title": "Lol App",
         "description": "I developed a project using the Riot Games API to showcase my ability to work with APIs. This application demonstrates how to integrate and manage data from the Riot Games API to create a platform that leverages the provided data.",
         "image": "/images/projects/LolApp.JPG",
         "urlRepo": "https://github.com/darioplazaleon/d.gg",
         "urlDemo": "https://d-gg.vercel.app/",
         "label": ["React", "NextJS"]
+      },
+      {
+        "title": "Fruit Market",
+        "description": "Application developed in Android Studio that simulates a fruit market. The application allows you to add fruits to the shopping cart and view the total purchase.",
+        "image": "/images/projects/918shots_so.png",
+        "urlRepo": "https://github.com/darioplazaleon/FruitApp-Compose",
+        "urlDemo": "",
+        "label": ["Kotlin", "Compose"]
       }
     ]
   },
@@ -104,7 +110,8 @@
     }
   },
   "Technologies": {
-    "title": "// Technologies",
+    "title": "⚙️ Technologies",
+    "text": ["I have mastered", "key technologies", "to develop ", "innovative and efficient solutions.", "Discover the tools I use to take each project to the ", "next level"],
     "technologies": [
       {
         "name": "Python",
@@ -161,10 +168,35 @@
       {
         "name": "Astro",
         "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg"
+      },
+      {
+        "name": "Kotlin",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"
+      },
+      {
+        "name": "Android",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg"
+      },
+      {
+        "name": "Compose",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetpackcompose/jetpackcompose-original.svg"
       }
     ]
   },
   "Footer": {
-    "linkCV": "https://drive.google.com/file/d/1z2y-OJAwlM-LxVftuu3g8940E8xpJclZ/view?usp=drive_link"
+    "linkCV": "https://drive.google.com/file/d/1z2y-OJAwlM-LxVftuu3g8940E8xpJclZ/view?usp=drive_link",
+    "socialTitle": "Social media",
+    "menu": {
+      "title": "Explore",
+      "home": "Home",
+      "aboutMe": "About Me",
+      "projects": "Proyects",
+      "services": "Services"
+    },
+    "contact": {
+      "title": "Contact",
+      "phrase": "Say Hi!",
+      "email": "Contact me: "
+    }
   }
 }

@@ -2,27 +2,30 @@
 const { techInfo } = Astro.props;
 
 const techs = techInfo.technologies;
+const texts = techInfo.text;
 ---
 
-<section class="h-auto w-full flex flex-col gap-10 justify-around bg-ctp-crust mt-10">
+<section
+  class="h-auto w-full flex flex-col gap-10 justify-around bg-ctp-crust mt-10"
+>
   <h1 class="text-ctp-peach text-center font-bold text-5xl pb-4">
     {techInfo.title}
   </h1>
   <p
     class="text-center text-white font-semibold text-xl sm:text-xl md:text-2xl lg:text-4xl px-3"
   >
-    He dominado diversas <span class="text-[#cba6f7] font-bold"
-      >tecnologías clave</span
-    > para desarrollar soluciones
-    <span class="text-[#89b4fa] font-bold">innovadoras y eficientes.</span>
-    <br /> Descubre las herramientas que utilizo para llevar cada proyecto al <span
-      class="text-[#f9e2af] font-bold">siguiente nivel</span
-    >.
+    {texts[0]}
+    <span class="text-[#cba6f7] font-bold">{texts[1]}</span>
+    {texts[2]}
+    <span class="text-[#89b4fa] font-bold">{texts[3]}</span>
+    <br />
+    {texts[4]}
+    <span class="text-[#f9e2af] font-bold">{texts[5]}</span>.
   </p>
 
-  <div class="relative w-full h-52 pt-6">
+  <div class="relative w-full h-60 pt-10">
     <div
-      class="absolute inset-0 z-20 before:absolute before:left-0 before:top-0 before:w-1/4 before:h-full before:bg-gradient-to-r before:from-ctp-crust before:to-transparent before:filter before:blur-3 after:absolute after:right-0 after:top-0 after:w-1/4 after:h-full after:bg-gradient-to-l after:from-ctp-crust after:to-transparent after:filter after:blur-3"
+      class="absolute inset-0 z-20 before:absolute before:left-0 before:top-0 before:w-2/4 before:h-full before:bg-gradient-to-r before:from-ctp-crust before:to-transparent before:filter before:blur-3 after:absolute after:right-0 after:top-0 after:w-2/4 after:h-full after:bg-gradient-to-l after:from-ctp-crust after:to-transparent after:filter after:blur-3"
     >
     </div>
     <div class="h-full w-full flex keen-slider" id="my-keen-slider">

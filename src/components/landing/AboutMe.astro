@@ -2,6 +2,7 @@
 const { aboutInfo } = Astro.props;
 
 console.log(aboutInfo);
+const textMe = aboutInfo.menu.aboutMe;
 ---
 
 <section
@@ -13,22 +14,17 @@ console.log(aboutInfo);
   >
     <div class="flex flex-col lg:text-start lg:pb-10">
       <h1 class="font-bold text-ctp-peach text-4xl sm:text-5xl lg:text-6xl">
-        Sobre mi 👋
+        {aboutInfo.title}
       </h1>
       <p class="text-white font-semibold sm:text-xl lg:text-2xl">
-        Mi pasion por crear nunca termina
+        {aboutInfo.subtitle}
       </p>
     </div>
     <p class="text-white py-4 sm:text-xl lg:text-2xl w-full" id="textMe">
-      Soy <span class="underline underline-offset-2"
-        >Dario Alessandro Plaza Leon</span
-      >, mis dos mayores caracteristicas son la sinceridad y la pasion que le
-      dedico a lo que me gusta. Ademas de estas dos caracteristicas, soy una
-      persona que siempre esta dispuesta a ayudar a los demas, ya sea en el
-      ambito laboral o personal. Mi pasion por la tecnologia y la programacion
-      siempre me lleva a querer aprender mas y mas.
+      {textMe[0]}
+      <span class="underline underline-offset-2">{textMe[1]}</span>{textMe[2]}
     </p>
-    <div class="flex gap-10 justify-center  text-4xl text-ctp-mauve">
+    <div class="flex gap-10 justify-center text-4xl text-ctp-mauve">
       <a href="https://www.linkedin.com/in/dario-plaza/" target="_blank"
         ><i class="fa-brands fa-linkedin"></i>
       </a>

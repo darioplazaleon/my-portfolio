@@ -17,13 +17,11 @@
     }
   ],
   "About": {
-    "title": "// Acerca de mí",
-    "linkCV": "https://drive.google.com/file/d/1ZAn_rOgUI0GgLtFB8nvFFkPx2b35gCsI/view?usp=drive_link",
+    "title": "Sobre mí 👋",
+    "subtitle": "Mi pasion por crear nunca termina",
+    "linkCV": "https://drive.google.com/file/d/1ZAn_rOgUI0GgLtFB8nvFFkPx2b35gCsI/view?usp=sharing",
     "menu": {
-      "section1": "Yo",
-      "section2": "Tecnologías",
-      "section3": "Educacion",
-      "texts1": "Hola, soy Darío. Mi pasión es la tecnología y el aprendizaje. Desde que era niño, me ha fascinado cómo la tecnología cambia el mundo. Siempre estoy buscando aprender algo nuevo, ya sea desmontando dispositivos o tomando cursos en línea. Creo que el aprendizaje continuo es esencial para el crecimiento. Mi objetivo es seguir explorando el mundo de la tecnología y compartir mis conocimientos con otros entusiastas. ¡Conéctate conmigo si compartes estos intereses!",
+      "aboutMe": ["Soy ", "Dario Alessandro Plaza Leon", "mis dos mayores características son la sinceridad y la pasión que le dedico a lo que me gusta. Además de estas dos características, soy una persona que siempre está dispuesta a ayudar a los demás, ya sea en el ámbito laboral o personal. Mi pasión por la tecnología y la programación siempre me lleva a querer aprender más y más."] ,
       "education": [
         {
           "title": "Titulo de bachiller en Economía y Administración",
@@ -70,7 +68,8 @@
     ]
   },
   "Projects": {
-    "title": "// Proyectos",
+    "title": "📂 Proyectos",
+    "moreButton": "Mas Proyectos",
     "projects": [
       {
         "title": "Tetris Demo",
@@ -111,7 +110,8 @@
     }
   },
   "Technologies": {
-    "title": "// Tecnologías",
+    "title": "⚙️ Tecnologías",
+    "text": ["He dominado", "tecnologías clave", "para desarrollar soluciones ", "innovadoras y eficientes.", "Descubre las herramientas que utilizo para llevar cada proyecto al ", "siguiente nivel"],
     "technologies": [
       {
         "name": "Python",
@@ -168,10 +168,35 @@
       {
         "name": "Astro",
         "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg"
+      },
+      {
+        "name": "Kotlin",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"
+      },
+      {
+        "name": "Android",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg"
+      },
+      {
+        "name": "Compose",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetpackcompose/jetpackcompose-original.svg"
       }
     ]
   },
   "Footer": {
-    "linkCV": "https://drive.google.com/file/d/1ZAn_rOgUI0GgLtFB8nvFFkPx2b35gCsI/view?usp=drive_link"
+    "linkCV": "https://drive.google.com/file/d/1ZAn_rOgUI0GgLtFB8nvFFkPx2b35gCsI/view?usp=sharing",
+    "socialTitle": "Redes Sociales",
+    "menu": {
+      "title": "Explorar",
+      "home": "Inicio",
+      "aboutMe": "Sobre mi",
+      "projects": "Proyectos",
+      "services": "Servicios"
+    },
+    "contact": {
+      "title": "Contacto",
+      "phrase": "¡Di Hola!",
+      "email": "Contactame: "
+    }
   }
 }
