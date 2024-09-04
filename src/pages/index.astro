@@ -3,8 +3,6 @@ import Layout from "../layout/Layout.astro";
 import Hero from "../components/landing/Hero.astro";
 import AboutMe from "../components/landing/AboutMe.astro";
 import Projects from "../components/landing/Projects.astro";
-import Contact from "../components/landing/Contact.astro";
-import Services from "../components/landing/Services.astro";
 
 import { getRelativeLocaleUrl } from "astro:i18n";
 import Technologies from "../components/landing/Technologies.astro";
@@ -22,14 +20,11 @@ const techinfo = info[0].Technologies;
 const navinfo = info[0].Navbar;
 const footerinfo = info[0].Footer;
 
-console.log(info)
 ---
 
 <Layout infoNav={navinfo} infoFooter={footerinfo}>
   <Hero infoHero={heroinfo} />
   <AboutMe aboutInfo={aboutinfo} />
-  <!-- <Services infoService={serviceinfo}/> -->
   <Projects infoProjects={projectsinfo} />
   <Technologies techInfo={techinfo} />
-  <!-- <Contact infoContact={contactinfo}/> -->
 </Layout>

@@ -44,7 +44,7 @@ const Greeting = () => {
             {!isExiting && (
                 <motion.div
                     id="animated-text"
-                    className="w-screen h-screen bg-black fixed top-0 left-0 z-50 flex justify-center items-center"
+                    className="w-screen h-screen bg-ctp-base fixed top-0 left-0 z-50 flex justify-center items-center"
                     initial={{ opacity: 1, y: 0 }}
                     animate="visible"
                     exit="exit"
@@ -52,7 +52,7 @@ const Greeting = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <motion.p
-                        className="text-white text-3xl"
+                        className="text-white text-5xl"
                         initial={{ opacity: 1 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: interval / 1000 }}
