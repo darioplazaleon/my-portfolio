@@ -19,6 +19,7 @@
   "About": {
     "title": "About Me 👋",
     "linkCV": "https://drive.google.com/file/d/1z2y-OJAwlM-LxVftuu3g8940E8xpJclZ/view?usp=sharing",
+    "buttonCV": "Download CV",
     "menu": {
       "aboutMe": ["I am ", "Dario Alessandro Plaza Leon ", "my two greatest characteristics are the sincerity and the passion that I dedicate to what I like. In addition to these two characteristics, I am a person who is always willing to help others, whether in the workplace or personally. My passion for technology and programming always leads me to want to learn more and more."],
       "education": [
@@ -110,7 +111,7 @@
     }
   },
   "Technologies": {
-    "title": "⚙️ Technologies",
+    "title": "⚙️ My stack",
     "text": ["I have mastered", "key technologies", "to develop ", "innovative and efficient solutions.", "Discover the tools I use to take each project to the ", "next level"],
     "technologies": [
       {

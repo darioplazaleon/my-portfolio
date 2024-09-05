@@ -20,6 +20,7 @@
     "title": "Sobre mí 👋",
     "subtitle": "Mi pasion por crear nunca termina",
     "linkCV": "https://drive.google.com/file/d/1ZAn_rOgUI0GgLtFB8nvFFkPx2b35gCsI/view?usp=sharing",
+    "buttonCV": "Descargar CV",
     "menu": {
       "aboutMe": ["Soy ", "Dario Alessandro Plaza Leon ", "mis dos mayores características son la sinceridad y la pasión que le dedico a lo que me gusta. Además de estas dos características, soy una persona que siempre está dispuesta a ayudar a los demás, ya sea en el ámbito laboral o personal. Mi pasión por la tecnología y la programación siempre me lleva a querer aprender más y más."] ,
       "education": [

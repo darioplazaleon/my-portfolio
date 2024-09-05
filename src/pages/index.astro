@@ -6,6 +6,7 @@ import Projects from "../components/landing/Projects.astro";
 
 import { getRelativeLocaleUrl } from "astro:i18n";
 import Technologies from "../components/landing/Technologies.astro";
+import Greeting from "../components/GreetingsReact";
 
 const urles = getRelativeLocaleUrl("es", "");
 
@@ -23,6 +24,7 @@ const footerinfo = info[0].Footer;
 ---
 
 <Layout infoNav={navinfo} infoFooter={footerinfo}>
+  <Greeting client:load />
   <Hero infoHero={heroinfo} />
   <AboutMe aboutInfo={aboutinfo} />
   <Projects infoProjects={projectsinfo} />
