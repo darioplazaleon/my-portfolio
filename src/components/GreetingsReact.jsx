@@ -6,15 +6,10 @@ const Greeting = () => {
         { text: "Hola", emoji: "👋" }, // Español
         { text: "Hello", emoji: "👋" }, // Inglés
         { text: "Bonjour", emoji: "👋" }, // Francés
-        { text: "Ciao", emoji: "👋" }, // Italiano
-        { text: "Olá", emoji: "👋" }, // Portugués
         { text: "Hej", emoji: "👋" }, // Sueco
         { text: "Привет", emoji: "👋" }, // Ruso
-        { text: "你好", emoji: "👋" }, // Chino
         { text: "こんにちは", emoji: "👋" }, // Japonés
         { text: "안녕하세요", emoji: "👋" }, // Coreano
-        { text: "Γεια σας", emoji: "👋" }, // Griego
-        { text: "مرحبا", emoji: "👋" }, // Árabe
     ];
 
     const [index, setIndex] = useState(0);
