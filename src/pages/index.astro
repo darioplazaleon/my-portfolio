@@ -3,14 +3,17 @@ import Layout from "../layout/Layout.astro";
 import Hero from "../components/landing/Hero.astro";
 import AboutMe from "../components/landing/AboutMe.astro";
 import Projects from "../components/landing/Projects.astro";
-
-import { getRelativeLocaleUrl } from "astro:i18n";
 import Technologies from "../components/landing/Technologies.astro";
 import Greeting from "../components/GreetingsReact";
 
-const urles = getRelativeLocaleUrl("es", "");
+import { getI18N } from "../i18n";
 
-const info = await Astro.glob("../data/dataES.json");
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+console.log("soy 18" + i18n)
+
+const info = await Astro.glob("../i18n/es.json");
 const heroinfo = info[0].Hero;
 const aboutinfo = info[0].About;
 const serviceinfo = info[0].Services;
@@ -20,7 +23,6 @@ const techinfo = info[0].Technologies;
 
 const navinfo = info[0].Navbar;
 const footerinfo = info[0].Footer;
-
 ---
 
 <Layout navInfo={navinfo} footerInfo={footerinfo}>

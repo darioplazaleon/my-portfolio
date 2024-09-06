@@ -1,0 +1,23 @@
+---
+import { languages } from "../i18n/ui"
+import { getLangFromUrl, useTranslatedPath } from "../i18n/utils"
+
+
+const lang = getLangFromUrl(Astro.url)
+const translatePath = useTranslatedPath(lang)
+---
+
+
+{
+  Object.entries(languages).map(([langPrefix]) => {
+    if (langPrefix == lang) return <></>
+    return (
+    <button
+        class="text-white bg-ctp-peach font-bold rounded-xl p-2 text-center w-20"
+      >
+      <a href={translatePath("/", langPrefix)}>{langPrefix.toUpperCase()}</a>
+      </button>
+    )
+  })
+}
+

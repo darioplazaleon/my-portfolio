@@ -2,6 +2,7 @@
 import Navbar from "../components/landing/Navbar.astro";
 import Footer from "../components/landing/Footer.astro";
 import "../styles/layout.css";
+import { ViewTransitions } from "astro:transitions";
 
 const { title, lang, navInfo, footerInfo } = Astro.props;
 ---
@@ -49,6 +50,7 @@ const { title, lang, navInfo, footerInfo } = Astro.props;
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
+    <ViewTransitions />
   </head>
   <body class="custom-gradient">
     <Navbar infoNavbar={navInfo} />

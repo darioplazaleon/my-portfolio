@@ -1,21 +1,25 @@
 ---
-import { getAbsoluteLocaleUrl, getRelativeLocaleUrl } from "astro:i18n";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const { footerInfo } = Astro.props;
 
-const url = Astro.currentLocale;
+const explorer = footerInfo.menu;
+const contact = footerInfo.contact;
 
-console.log(url)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
-const explorer = footerInfo.menu
-const contact = footerInfo.contact
+const { currentLocale } = Astro;
 ---
 
 <footer class="w-full h-auto flex flex-col items-center bg-ctp-base border-t-2">
   <div class="flex flex-col w-full items-center sm:flex-row sm:w-11/12">
     <div class="flex w-full justify-around my-5 lg:text-xl">
       <div class="flex flex-col gap-3 text-ctp-mauve">
-        <p class="text-ctp-peach underline font-bold">{footerInfo.socialTitle}</p>
+        <p class="text-ctp-peach underline font-bold">
+          {footerInfo.socialTitle}
+        </p>
         <a
           href="https://www.linkedin.com/in/dario-plaza/"
           target="_blank"
@@ -52,7 +56,9 @@ const contact = footerInfo.contact
           <p class="text-center text-ctp-text">{contact.phrase}</p>
         </div>
         <button class="w-2/6 flex items-center justify-center">
-          <a href={contact.link}><i class="fa-solid fa-arrow-right text-ctp-peach"></i></a>
+          <a href={getRelativeLocaleUrl(currentLocale ?? "", "contact")}
+            ><i class="fa-solid fa-arrow-right text-ctp-peach"></i></a
+          >
         </button>
       </div>
       <a
@@ -73,9 +79,8 @@ const contact = footerInfo.contact
     </div>
   </div>
   <a href="" class="text-ctp-text mt-3"
-    >{contact.email} <span class="font-bold underline"
-      >darioalessandrop@gmail.com</span
-    ></a
+    >{contact.email}
+    <span class="font-bold underline">darioalessandrop@gmail.com</span></a
   >
   <p class="text-center text-gray-500 text-xs bg-ctp-crust w-full mt-2">
     &copy; 2024 Dario. Todos los derechos reservados.
