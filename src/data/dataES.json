@@ -1,30 +1,31 @@
 {
   "Navbar": [
     {
-      "aboutme": "About Me",
-      "proyects": "Proyects",
-      "services": "Services",
-      "contact": "Contact",
-      "button": "/",
-      "buttonText": "ES"
+      "aboutme": "Acerca de mí",
+      "proyects": "Proyectos",
+      "services": "Servicios",
+      "contact": "Contacto",
+      "button": "/en",
+      "buttonText": "EN"
     }
   ],
   "Hero": [
     {
-      "introduction": "Hi, i'm",
+      "introduction": "Hola, soy",
       "name": "Darío Plaza León",
-      "profession": "Software Developer"
+      "profession": "Desarrollador de Software"
     }
   ],
   "About": {
-    "title": "About Me 👋",
-    "linkCV": "https://drive.google.com/file/d/1z2y-OJAwlM-LxVftuu3g8940E8xpJclZ/view?usp=sharing",
-    "buttonCV": "Download CV",
+    "title": "Sobre mí 👋",
+    "subtitle": "Mi pasion por crear nunca termina",
+    "linkCV": "https://drive.google.com/file/d/1ZAn_rOgUI0GgLtFB8nvFFkPx2b35gCsI/view?usp=sharing",
+    "buttonCV": "Descargar CV",
     "menu": {
-      "aboutMe": ["I am ", "Dario Alessandro Plaza Leon ", "my two greatest characteristics are the sincerity and the passion that I dedicate to what I like. In addition to these two characteristics, I am a person who is always willing to help others, whether in the workplace or personally. My passion for technology and programming always leads me to want to learn more and more."],
+      "aboutMe": ["Soy ", "Dario Alessandro Plaza Leon ", "mis dos mayores características son la sinceridad y la pasión que le dedico a lo que me gusta. Además de estas dos características, soy una persona que siempre está dispuesta a ayudar a los demás, ya sea en el ámbito laboral o personal. Mi pasión por la tecnología y la programación siempre me lleva a querer aprender más y más."] ,
       "education": [
         {
-          "title": "Bachelor's Degree in Economics and Administration",
+          "title": "Titulo de bachiller en Economía y Administración",
           "date": "2015-2020",
           "institution": "Instituto María Ana Mogas"
         },
@@ -34,47 +35,46 @@
           "institution": "Digital House"
         },
         {
-          "title": "Diploma in Data Science and Artificial Intelligence",
+          "title": "Diplomatura en Ciencia de Datos e Inteligencia Artificial",
           "date": "2023-2023",
           "institution": "Universidad Nacional de General San Martin"
         }
-      ] 
-      } 
+      ]
     }
-  ,
+  },
   "Services": {
-    "title": "// Services",
-    "more": "And many more...",
+    "title": "// Servicios",
+    "more": "Y muchos más...",
     "services": [
       {
-        "title": "Web Development",
-        "description": "I will implement the best technologies to create a tailor-made website. I provide completely customized and efficient solutions.",
+        "title": "Desarrollo Web",
+        "description": "Implementaré las mejores tecnologías para crear un sitio web a medida. Ofrezco soluciones completamente personalizadas y eficientes.",
         "image": "/images/pic1.jpg"
       },
       {
-        "title": "Backend Development",
-        "description": "I integrate systems and APIs so that your website can interact with other platforms and services, obtaining new functionalities.",
+        "title": "Desarrollo Backend",
+        "description": "Integro sistemas y APIs para que tu sitio web pueda interactuar con otras plataformas y servicios, obteniendo nuevas funcionalidades.",
         "image": "/images/apiIntegracion.png"
       },
       {
-        "title": "SEO Optimization",
-        "description": "I increase the visibility of your website on search engines so you can reach more people.",
+        "title": "Optimización SEO",
+        "description": "Aumento la visibilidad de tu sitio web en los motores de búsqueda para que puedas llegar a más personas.",
         "image": "/images/seoPic.png"
       },
       {
-        "title": "Web maintenance and update",
-        "description": "I will take care of keeping your website updated, secure, and free of errors so that you can focus on your business without worries.",
+        "title": "Mantenimiento y Actualización Web",
+        "description": "Me encargaré de mantener actualizado, seguro y libre de errores tu sitio web para que puedas enfocarte en tu negocio sin preocupaciones.",
         "image": "/images/mantenimientoWeb.jpg"
       }
     ]
   },
   "Projects": {
-    "title": "📂 Projects",
-    "moreButton": "More Projects",
+    "title": "📂 Proyectos",
+    "moreButton": "Mas Proyectos",
     "projects": [
       {
         "title": "Tetris Demo",
-        "description": "In this project, I implemented a Tetris game in Python using the Pygame library as part of my practice and consolidation of knowledge in Object-Oriented Programming (OOP).",
+        "description": "En este proyecto, implementé un juego de Tetris en Python utilizando la biblioteca Pygame como parte de mi práctica y consolidación de conocimientos en Programación Orientada a Objetos (OOP).",
         "image": "/images/projects/480shots_so.png",
         "urlRepo": "https://github.com/darioplazaleon/tetris-python.git",
         "urlDemo": "https://darioplaza.tech",
@@ -82,15 +82,15 @@
       },
       {
         "title": "Lol App",
-        "description": "I developed a project using the Riot Games API to showcase my ability to work with APIs. This application demonstrates how to integrate and manage data from the Riot Games API to create a platform that leverages the provided data.",
+        "description": "Desarrollé un proyecto utilizando la API de Riot Games para demostrar mi habilidad para trabajar con APIs. Esta aplicación demuestra cómo manejar datos de la API de Riot Games",
         "image": "/images/projects/529shots_so.png",
-        "urlRepo": "https://github.com/darioplazaleon/d.gg",
-        "urlDemo": "https://d-gg.vercel.app/",
+        "urlRepo": "https://github.com/darioplazaleon/tetris-python.git",
+        "urlDemo": "https://darioplaza.tech",
         "label": ["React", "NextJS"]
       },
       {
         "title": "Fruit Market",
-        "description": "Application developed in Android Studio that simulates a fruit market. The application allows you to add fruits to the shopping cart and view the total purchase.",
+        "description": "Aplicacion desarrollada en Android Studio que simula un mercado de frutas. La aplicacion permite agregar frutas al carrito de compras y ver el total de la compra.",
         "image": "/images/projects/918shots_so.png",
         "urlRepo": "https://github.com/darioplazaleon/FruitApp-Compose",
         "urlDemo": "",
@@ -99,20 +99,20 @@
     ]
   },
   "Contact": {
-    "title": "// Contact",
-    "subtitle": "Get in touch",
-    "sub": "If you liked my profile and think I can assist you, please use the contact form to get in touch with me, or you can use my social networks listed below. I look forward to hearing from you and helping in any way I can.",
+    "title": "// Contacto",
+    "subtitle": "Ponte en contacto",
+    "sub": "Si te gustó mi perfil y crees que puedo ayudarte, por favor utiliza el formulario de contacto para comunicarte conmigo, o puedes utilizar mis redes sociales que se encuentran listadas a continuación. Espero con interés saber de ti y ayudarte en todo lo que pueda.",
     "form": {
-      "name": "Name:",
-      "email": "Email:",
-      "subject": "Subject",
-      "message": "Message",
-      "button": "Send"
+      "name": "Nombre:",
+      "email": "Correo electrónico:",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "button": "Enviar"
     }
   },
   "Technologies": {
-    "title": "⚙️ My stack",
-    "text": ["I have mastered", "key technologies", "to develop ", "innovative and efficient solutions.", "Discover the tools I use to take each project to the ", "next level"],
+    "title": "⚙️ Tecnologías",
+    "text": ["He dominado", "tecnologías clave", "para desarrollar soluciones ", "innovadoras y eficientes.", "Descubre las herramientas que utilizo para llevar cada proyecto al ", "siguiente nivel"],
     "technologies": [
       {
         "name": "Python",
@@ -185,19 +185,20 @@
     ]
   },
   "Footer": {
-    "linkCV": "https://drive.google.com/file/d/1z2y-OJAwlM-LxVftuu3g8940E8xpJclZ/view?usp=sharing",
-    "socialTitle": "Social media",
+    "linkCV": "https://drive.google.com/file/d/1ZAn_rOgUI0GgLtFB8nvFFkPx2b35gCsI/view?usp=sharing",
+    "socialTitle": "Redes Sociales",
     "menu": {
-      "title": "Explore",
-      "home": "Home",
-      "aboutMe": "About Me",
-      "projects": "Proyects",
-      "services": "Services"
+      "title": "Explorar",
+      "home": "Inicio",
+      "aboutMe": "Sobre mi",
+      "projects": "Proyectos",
+      "services": "Servicios"
     },
     "contact": {
-      "title": "Contact",
-      "phrase": "Say Hi!",
-      "email": "Contact me: "
+      "title": "Contacto",
+      "phrase": "¡Di Hola!",
+      "email": "Contactame: ",
+      "link": "/contact"
     }
   }
 }

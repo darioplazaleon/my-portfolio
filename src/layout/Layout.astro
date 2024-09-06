@@ -2,17 +2,16 @@
 import Navbar from "../components/landing/Navbar.astro";
 import Footer from "../components/landing/Footer.astro";
 import "../styles/layout.css";
-import Greeting from "../components/GreetingsReact";
 
-const { infoFooter, infoNav } = Astro.props;
+const { title, lang, navInfo, footerInfo } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dario A. Plaza Leon</title>
+    <title>{title}</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"
@@ -52,12 +51,11 @@ const { infoFooter, infoNav } = Astro.props;
     />
   </head>
   <body class="custom-gradient">
-    <!-- <Greeting client:load/> -->
-    <Navbar infoNavbar={infoNav} />
+    <Navbar infoNavbar={navInfo} />
     <main class="w-screen">
       <slot />
     </main>
-    <Footer footerInfo={infoFooter} />
+    <Footer footerInfo={footerInfo} />
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"

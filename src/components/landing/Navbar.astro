@@ -1,39 +1,60 @@
 ---
-import LanguageChange from "../LanguageChange.astro"
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import LanguageChange from "../LanguageChange.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
-const { infoNavbar } = Astro.props
+const { infoNavbar } = Astro.props;
 
-console.log(infoNavbar[0].aboutme)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const {currentLocale} = Astro;
 ---
 
 <header class="h-20 sticky top-0 backdrop-blur z-20">
-    <nav class="h-full flex flex-row justify-around items-center">
-        <div class="flex flex-row justify-center items-center space-x-4 text-ctp-peach">
-            <i class="fa-solid fa-terminal text-2xl"></i>
-            <p class="font-bold text-2xl">Dario</p>
-        </div>
-        <ul class="hidden lg:flex flex-row items-center space-x-6 text-white font-bold underline underline-offset-8">
-            <li><a href="#aboutMe" id="aboutme" data-en="About Me" data-es="Sobre mí">{infoNavbar[0].aboutme}</a></li>
-            <li><a href="#projectS" id="projects" data-en="Projects" data-es="Proyectos">{infoNavbar[0].proyects}</a></li>
-            <!-- <li><a href="#serviceS" id="services" data-en="Services" data-es="Servicios">{infoNavbar[0].services}</a></li> -->
-            <li><a href="#contacT" id="contact" data-en="Contact" data-es="Contacto">{infoNavbar[0].contact}</a></li>
-        </ul>
-        <div class="space-x-6">
-            <LanguageChange linkButton={infoNavbar[0].button} buttonText={infoNavbar[0].buttonText}/>
-        </div>
-        <!-- NAVBAR EN MOBILE -->
-        
-    </nav>
+  <nav class="h-full flex flex-row justify-around items-center">
+    <div
+      class="flex flex-row justify-center items-center space-x-4 text-ctp-peach"
+    >
+      <i class="fa-solid fa-terminal text-2xl"></i>
+      <p class="font-bold text-2xl">Dario</p>
+    </div>
+    <ul
+      class="hidden lg:flex flex-row items-center space-x-6 text-white font-bold underline underline-offset-8"
+    >
+      <li>
+        <a href={getRelativeLocaleUrl(currentLocale ?? '', '')}
+          >{t('nav.home')}</a>
+      </li>
+      <li>
+        <a href={getRelativeLocaleUrl(currentLocale ?? '', 'aboutme')} 
+          >{t('nav.about')}</a>
+      </li>
+      <li>
+        <a href={getRelativeLocaleUrl(currentLocale ?? '', 'services')}
+          >{t('nav.services')}</a>
+      </li>
+      <li>
+        <a href={getRelativeLocaleUrl(currentLocale ?? '', 'contact')}>
+            {t('nav.contact')}
+        </a>
+      </li>
+    </ul>
+    <div class="space-x-6">
+      <LanguageChange
+        linkButton={infoNavbar[0].button}
+        buttonText={infoNavbar[0].buttonText}
+      />
+    </div>
+  </nav>
 </header>
 
 <style>
-    ul {
-        height: 2.5rem;
-    }
+  ul {
+    height: 2.5rem;
+  }
 
-    header {
-        color: white;
-    }
+  header {
+    color: white;
+  }
 </style>
-
-

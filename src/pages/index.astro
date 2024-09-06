@@ -10,7 +10,7 @@ import Greeting from "../components/GreetingsReact";
 
 const urles = getRelativeLocaleUrl("es", "");
 
-const info = await Astro.glob("../data/dataEs.json");
+const info = await Astro.glob("../data/dataES.json");
 const heroinfo = info[0].Hero;
 const aboutinfo = info[0].About;
 const serviceinfo = info[0].Services;
@@ -23,7 +23,7 @@ const footerinfo = info[0].Footer;
 
 ---
 
-<Layout infoNav={navinfo} infoFooter={footerinfo}>
+<Layout navInfo={navinfo} footerInfo={footerinfo}>
   <Greeting client:load />
   <Hero infoHero={heroinfo} />
   <AboutMe aboutInfo={aboutinfo} />

@@ -1,5 +1,11 @@
 ---
+import { getAbsoluteLocaleUrl, getRelativeLocaleUrl } from "astro:i18n";
+
 const { footerInfo } = Astro.props;
+
+const url = Astro.currentLocale;
+
+console.log(url)
 
 const explorer = footerInfo.menu
 const contact = footerInfo.contact
@@ -46,7 +52,7 @@ const contact = footerInfo.contact
           <p class="text-center text-ctp-text">{contact.phrase}</p>
         </div>
         <button class="w-2/6 flex items-center justify-center">
-          <a href=""><i class="fa-solid fa-arrow-right text-ctp-peach"></i></a>
+          <a href={contact.link}><i class="fa-solid fa-arrow-right text-ctp-peach"></i></a>
         </button>
       </div>
       <a
