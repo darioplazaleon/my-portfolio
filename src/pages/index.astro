@@ -11,18 +11,13 @@ import { getI18N } from "../i18n";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
-console.log("soy 18" + i18n)
+const heroinfo = i18n.Hero;
+const aboutinfo = i18n.About;
+const projectsinfo = i18n.Projects;
+const techinfo = i18n.Technologies;
 
-const info = await Astro.glob("../i18n/es.json");
-const heroinfo = info[0].Hero;
-const aboutinfo = info[0].About;
-const serviceinfo = info[0].Services;
-const projectsinfo = info[0].Projects;
-const contactinfo = info[0].Contact;
-const techinfo = info[0].Technologies;
-
-const navinfo = info[0].Navbar;
-const footerinfo = info[0].Footer;
+const navinfo = i18n.Navbar;
+const footerinfo = i18n.Footer;
 ---
 
 <Layout navInfo={navinfo} footerInfo={footerinfo}>

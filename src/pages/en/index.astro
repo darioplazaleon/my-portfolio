@@ -6,15 +6,18 @@ import Projects from "../../components/landing/Projects.astro";
 
 import Technologies from "../../components/landing/Technologies.astro";
 
-const info = await Astro.glob("../../data/dataEN.json");
+import { getI18N } from "../../i18n";
 
-const heroinfo = info[0].Hero;
-const aboutinfo = info[0].About;
-const projectsinfo = info[0].Projects;
-const techinfo = info[0].Technologies;
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 
-const navinfo = info[0].Navbar;
-const footerinfo = info[0].Footer;
+const heroinfo = i18n.Hero;
+const aboutinfo = i18n.About;
+const projectsinfo = i18n.Projects;
+const techinfo = i18n.Technologies;
+
+const navinfo = i18n.Navbar;
+const footerinfo = i18n.Footer;
 ---
 
 <Layout title="Dario A. Plaza Leon" lang="EN" navInfo={navinfo} footerInfo={footerinfo}>

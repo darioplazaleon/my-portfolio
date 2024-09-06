@@ -3,8 +3,6 @@ import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import LanguageChange from "../LanguagePicker.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
-const { infoNavbar } = Astro.props;
-
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
@@ -44,10 +42,7 @@ const { currentLocale } = Astro;
       </li>
     </ul>
     <div class="space-x-6">
-      <LanguageChange
-        linkButton={infoNavbar[0].button}
-        buttonText={infoNavbar[0].buttonText}
-      />
+      <LanguageChange />
     </div>
   </nav>
 </header>

@@ -15,7 +15,7 @@ const translatePath = useTranslatedPath(lang)
     <button
         class="text-white bg-ctp-peach font-bold rounded-xl p-2 text-center w-20"
       >
-      <a href={translatePath("/", langPrefix)}>{langPrefix.toUpperCase()}</a>
+      <a class="w-full" href={translatePath("/", langPrefix)}>{langPrefix.toUpperCase()}</a>
       </button>
     )
   })
