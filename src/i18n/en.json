@@ -200,5 +200,32 @@
       "email": "Contact me: ",
       "link": "/en/contact"
     }
+  },
+  "ContactPage": {
+    "TITLE": "📬 Contact",
+    "SUBTITLE": "Let's talk.",
+    "SUBTITLE_2": "Tell me about your project.",
+    "SUBTITLE_3": "Let's create something together. 🤝",
+    "MAIL_PHRASE": "Mail me at:",
+    "FORM": [
+      {
+        "name": "Name",
+        "placeholder": "Dario Alessandro"
+      },
+      {
+        "name": "Email",
+        "placeholder": "darioalessandrop@gmail.com"
+      },
+      {
+        "name": "Subject",
+        "placeholder": "I need help with..."
+      },
+      {
+        "name": "Message",
+        "placeholder": "Your message..."
+      }
+    ],
+    "FORM_TITLE": "Send me a message 🚀",
+    "FORM_BUTTON": "Send"
   }
 }

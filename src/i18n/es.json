@@ -98,18 +98,6 @@
       }
     ]
   },
-  "Contact": {
-    "title": "// Contacto",
-    "subtitle": "Ponte en contacto",
-    "sub": "Si te gustó mi perfil y crees que puedo ayudarte, por favor utiliza el formulario de contacto para comunicarte conmigo, o puedes utilizar mis redes sociales que se encuentran listadas a continuación. Espero con interés saber de ti y ayudarte en todo lo que pueda.",
-    "form": {
-      "name": "Nombre:",
-      "email": "Correo electrónico:",
-      "subject": "Asunto",
-      "message": "Mensaje",
-      "button": "Enviar"
-    }
-  },
   "Technologies": {
     "title": "⚙️ Tecnologías",
     "text": ["He dominado", "tecnologías clave", "para desarrollar soluciones ", "innovadoras y eficientes.", "Descubre las herramientas que utilizo para llevar cada proyecto al ", "siguiente nivel"],
@@ -200,5 +188,32 @@
       "email": "Contactame: ",
       "link": "/contact"
     }
+  },
+  "ContactPage": {
+    "TITLE": "📬 Contacto",
+    "SUBTITLE": "Hablemos.",
+    "SUBTITLE_2": "Contame sobre tu proyecto.",
+    "SUBTITLE_3": "Creemos algo juntos. 🛠️",
+    "MAIL_PHRASE": "Manda mail a:",
+    "FORM": [
+      {
+        "name": "Nombre",
+        "placeholder": "Dario Alessandro"
+      },
+      {
+        "name": "Email",
+        "placeholder": "darioalessandrop@gmail.com"
+      },
+      {
+        "name": "Asunto",
+        "placeholder": "Necesito ayuda con..."
+      },
+      {
+        "name": "Mensaje",
+        "placeholder": "Tu mensaje..."
+      }
+    ],
+    "FORM_TITLE": "Envíame un mensaje 🚀",
+    "FORM_BUTTON": "Enviar"
   }
 }

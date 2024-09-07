@@ -1,17 +1,8 @@
 ---
 import Layout from "../../layout/Layout.astro";
-
-const info = await Astro.glob("../../data/dataEN.json");
-
-const navinfo = info[0].Navbar;
-const footerinfo = info[0].Footer;
+import ContactPageComponent from "../../components/pages/contact.astro"
 ---
 
-<Layout navInfo={navinfo} footerInfo={footerinfo}>
-    <section class="w-full h-full bg-ctp-base">
-        <h1>Pongamosnos en contacto</h1>
-    </section>
+<Layout title="Contact">
+    <ContactPageComponent />
 </Layout>
-
-medidor : 006182367
-cliente: 03562408

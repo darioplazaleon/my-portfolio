@@ -1,0 +1,96 @@
+---
+import { getI18N } from "../../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const contact = i18n["ContactPage"];
+const form = contact.FORM
+---
+
+<main class="h-screen w-full flex items-center justify-around">
+  <section class="h-4/5 w-4/12 text-white flex flex-col gap-10">
+    <h1 class="font-bold text-5xl text-ctp-peach">{contact.TITLE}</h1>
+    <div class="flex flex-col gap-5 w-full">
+      <h2 class="text-3xl font-bold">{contact.FORM_TITLE}</h2>
+      <form
+        action="https://formspree.io/f/xnqoqzqz"
+        method="POST"
+        class="flex flex-col gap-4"
+      >
+        <div class="formDiv">
+          <label for="name">{form[0].name}</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder={form[0].placeholder}
+            class="inputForm"
+            required
+          />
+        </div>
+        <div class="formDiv">
+          <label for="email">{form[1].name}</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="inputForm"
+            placeholder={form[1].placeholder}
+            required
+          />
+        </div>
+        <div class="formDiv">
+          <label for="">{form[2].name}</label>
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            class="inputForm"
+            placeholder={form[2].placeholder}
+            required
+          />
+        </div>
+        <div class="formDiv">
+          <label for="message">{form[3].name}</label>
+          <textarea
+            name="message"
+            id="message"
+            class="inputForm"
+            placeholder={form[3].placeholder}
+            required></textarea>
+        </div>
+        <button type="submit" class="bg-ctp-peach h-12 rounded-xl"
+          >{contact.FORM_BUTTON}</button
+        >
+      </form>
+    </div>
+  </section>
+  <aside class="h-4/5 w-4/12 text-white flex flex-col justify-center gap-8">
+    <div class="flex flex-col gap-4">
+      <h3 class="text-5xl font-bold">
+        {contact.SUBTITLE} <br /> {contact.SUBTITLE_2}
+      </h3>
+      <p class="text-2xl">{contact.SUBTITLE_3}</p>
+    </div>
+    <div class="text-xl">
+      <p class="">{contact.MAIL_PHRASE}</p>
+      <span class="text-ctp-mauve">darioalessandrop@gmail.com</span>
+    </div>
+  </aside>
+</main>
+
+<style>
+  .formDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .inputForm {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #000;
+    background: #313244;
+  }
+</style>

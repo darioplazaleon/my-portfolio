@@ -4,11 +4,13 @@ import Footer from "../components/landing/Footer.astro";
 import "../styles/layout.css";
 import { ViewTransitions } from "astro:transitions";
 
-const { title, lang, navInfo, footerInfo } = Astro.props;
+const { title, lang} = Astro.props;
+
+const {currentLocale} = Astro;
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,18 +48,12 @@ const { title, lang, navInfo, footerInfo } = Astro.props;
     <script
       src="https://kit.fontawesome.com/3e9cace6d9.js"
       crossorigin="anonymous"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-    />
     <ViewTransitions />
   </head>
   <body class="custom-gradient">
-    <Navbar infoNavbar={navInfo} />
-    <main class="w-screen">
+    <Navbar />
       <slot />
-    </main>
-    <Footer footerInfo={footerInfo} />
+    <Footer/>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"
