@@ -8,11 +8,12 @@ const contact = i18n["ContactPage"];
 const form = contact.FORM
 ---
 
-<main class="h-screen w-full flex items-center justify-around">
-  <section class="h-4/5 w-4/12 text-white flex flex-col gap-10">
+<main class="min-h-screen w-full flex flex-col md:flex-row items-center justify-around">
+  <section class="h-4/5 w-10/12 lg:w-4/12 text-white flex flex-col gap-10">
     <h1 class="font-bold text-5xl text-ctp-peach">{contact.TITLE}</h1>
+    <p class="text-2xl text-center lg:hidden">{contact.SUBTITLE_3}</p>
     <div class="flex flex-col gap-5 w-full">
-      <h2 class="text-3xl font-bold">{contact.FORM_TITLE}</h2>
+      <h2 class="text-2xl xl:text-3xl font-bold">{contact.FORM_TITLE}</h2>
       <form
         action="https://formspree.io/f/xnqoqzqz"
         method="POST"
@@ -66,7 +67,7 @@ const form = contact.FORM
       </form>
     </div>
   </section>
-  <aside class="h-4/5 w-4/12 text-white flex flex-col justify-center gap-8">
+  <aside class="h-4/5 w-4/12 text-white lg:flex flex-col justify-center gap-8 hidden">
     <div class="flex flex-col gap-4">
       <h3 class="text-5xl font-bold">
         {contact.SUBTITLE} <br /> {contact.SUBTITLE_2}
