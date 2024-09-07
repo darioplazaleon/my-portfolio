@@ -18,7 +18,7 @@ const { currentLocale } = Astro;
     <div class="flex w-full justify-around my-5 lg:text-xl">
       <div class="flex flex-col gap-3 text-ctp-mauve">
         <p class="text-ctp-peach underline font-bold">
-          {footerInfo.socialTitle}
+          {t("footer.socialTitle")}
         </p>
         <a
           href="https://www.linkedin.com/in/dario-plaza/"
@@ -40,20 +40,20 @@ const { currentLocale } = Astro;
         </a>
       </div>
       <div class="flex flex-col gap-2">
-        <p class="text-ctp-mauve underline font-bold">{explorer.title}</p>
+        <p class="text-ctp-mauve underline font-bold">{t("footer.explorerTitle")}</p>
         <ul class="text-ctp-peach flex flex-col gap-2">
-          <li><a href="">{explorer.home}</a></li>
-          <li><a href="">{explorer.aboutMe}</a></li>
-          <li><a href="">{explorer.projects}</a></li>
-          <li><a href="">{explorer.services}</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLocale ?? "", "")}>{t("nav.home")}</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLocale ?? "", "aboutme")}>{t("nav.about")}</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLocale ?? "", "services")}>{t("nav.services")}</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLocale ?? "", "projects")}>{t("nav.projects")}</a></li>
         </ul>
       </div>
     </div>
     <div class="flex flex-col items-center gap-8">
       <div class="flex rounded-xl w-48 h-20 border-ctp-mauve border-4">
         <div class="w-4/6 h-full flex flex-col justify-center">
-          <p class="text-center font-bold text-ctp-peach">{contact.title}</p>
-          <p class="text-center text-ctp-text">{contact.phrase}</p>
+          <p class="text-center font-bold text-ctp-peach">{t("nav.contact")}</p>
+          <p class="text-center text-ctp-text">{t("footer.contact.phrase")}</p>
         </div>
         <button class="w-2/6 flex items-center justify-center">
           <a href={getRelativeLocaleUrl(currentLocale ?? "", "contact")}
@@ -79,16 +79,11 @@ const { currentLocale } = Astro;
     </div>
   </div>
   <a href="" class="text-ctp-text mt-3"
-    >{contact.email}
+    >{t("footer.contact.email")}
     <span class="font-bold underline">darioalessandrop@gmail.com</span></a
   >
   <p class="text-center text-gray-500 text-xs bg-ctp-crust w-full mt-2">
-    &copy; 2024 Dario. Todos los derechos reservados.
+    {t("footer.copy")}
   </p>
 </footer>
 
-<style>
-  #downloadLink {
-    color: white;
-  }
-</style>
