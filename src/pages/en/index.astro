@@ -1,28 +1,8 @@
 ---
 import Layout from "../../layout/Layout.astro";
-import Hero from "../../components/landing/Hero.astro";
-import AboutMe from "../../components/landing/AboutMe.astro";
-import Projects from "../../components/landing/Projects.astro";
-
-import Technologies from "../../components/landing/Technologies.astro";
-
-import { getI18N } from "../../i18n";
-
-const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
-
-const heroinfo = i18n.Hero;
-const aboutinfo = i18n.About;
-const projectsinfo = i18n.Projects;
-const techinfo = i18n.Technologies;
-
-const navinfo = i18n.Navbar;
-const footerinfo = i18n.Footer;
+import App from "../../components/pages/index.astro";
 ---
 
-<Layout title="Dario A. Plaza Leon" lang="EN" navInfo={navinfo} footerInfo={footerinfo}>
-  <Hero infoHero={heroinfo} />
-  <AboutMe aboutInfo={aboutinfo} />
-  <Projects infoProjects={projectsinfo} />
-  <Technologies techInfo={techinfo} />
+<Layout title="Dario A. Plaza Leon | Software Developer">
+  <App/>
 </Layout>

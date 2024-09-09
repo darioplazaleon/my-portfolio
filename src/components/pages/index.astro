@@ -1,0 +1,25 @@
+---
+import Hero from "../../components/landing/Hero.astro";
+import AboutMe from "../../components/landing/AboutMe.astro";
+import Projects from "../../components/landing/Projects.astro";
+import Technologies from "../../components/landing/Technologies.astro";
+import Greeting from "../../components/GreetingsReact";
+
+import { getI18N } from "../../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const heroinfo = i18n.Hero;
+const aboutinfo = i18n.About;
+const projectsinfo = i18n.Projects;
+const techinfo = i18n.Technologies;
+---
+
+<main transition:animate="slide">
+    <Greeting client:load />
+    <Hero infoHero={heroinfo} />
+    <AboutMe aboutInfo={aboutinfo} />
+    <Projects infoProjects={projectsinfo} />
+    <Technologies techInfo={techinfo} />
+</main>

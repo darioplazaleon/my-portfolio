@@ -17,6 +17,7 @@ const form = contact.FORM
       <form
         action="https://formspree.io/f/xnqoqzqz"
         method="POST"
+        id="contactForm"
         class="flex flex-col gap-4"
       >
         <div class="formDiv">
@@ -65,6 +66,9 @@ const form = contact.FORM
           >{contact.FORM_BUTTON}</button
         >
       </form>
+      <div id="notification" class="hidden bg-green-500 text-white p-4 rounded">
+        ¡Formulario enviado con éxito!
+      </div>
     </div>
   </section>
   <aside class="h-4/5 w-4/12 text-white lg:flex flex-col justify-center gap-8 hidden">
@@ -80,6 +84,18 @@ const form = contact.FORM
     </div>
   </aside>
 </main>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    document.getElementById('notification').classList.remove('hidden');
+    setTimeout(() => {
+      document.getElementById('notification').classList.add('hidden');
+    }, 3000);
+  })
+</script>
+
 
 <style>
   .formDiv {
