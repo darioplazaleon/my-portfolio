@@ -22,7 +22,11 @@
     "linkCV": "https://drive.google.com/file/d/1ZAn_rOgUI0GgLtFB8nvFFkPx2b35gCsI/view?usp=sharing",
     "buttonCV": "Descargar CV",
     "menu": {
-      "aboutMe": ["Soy ", "Dario Alessandro Plaza Leon ", "mis dos mayores características son la sinceridad y la pasión que le dedico a lo que me gusta. Además de estas dos características, soy una persona que siempre está dispuesta a ayudar a los demás, ya sea en el ámbito laboral o personal. Mi pasión por la tecnología y la programación siempre me lleva a querer aprender más y más."] ,
+      "aboutMe": [
+        "Soy ",
+        "Dario Alessandro Plaza Leon ",
+        "mis dos mayores características son la sinceridad y la pasión que le dedico a lo que me gusta. Además de estas dos características, soy una persona que siempre está dispuesta a ayudar a los demás, ya sea en el ámbito laboral o personal. Mi pasión por la tecnología y la programación siempre me lleva a querer aprender más y más."
+      ],
       "education": [
         {
           "title": "Titulo de bachiller en Economía y Administración",
@@ -41,32 +45,6 @@
         }
       ]
     }
-  },
-  "Services": {
-    "title": "// Servicios",
-    "more": "Y muchos más...",
-    "services": [
-      {
-        "title": "Desarrollo Web",
-        "description": "Implementaré las mejores tecnologías para crear un sitio web a medida. Ofrezco soluciones completamente personalizadas y eficientes.",
-        "image": "/images/pic1.jpg"
-      },
-      {
-        "title": "Desarrollo Backend",
-        "description": "Integro sistemas y APIs para que tu sitio web pueda interactuar con otras plataformas y servicios, obteniendo nuevas funcionalidades.",
-        "image": "/images/apiIntegracion.png"
-      },
-      {
-        "title": "Optimización SEO",
-        "description": "Aumento la visibilidad de tu sitio web en los motores de búsqueda para que puedas llegar a más personas.",
-        "image": "/images/seoPic.png"
-      },
-      {
-        "title": "Mantenimiento y Actualización Web",
-        "description": "Me encargaré de mantener actualizado, seguro y libre de errores tu sitio web para que puedas enfocarte en tu negocio sin preocupaciones.",
-        "image": "/images/mantenimientoWeb.jpg"
-      }
-    ]
   },
   "Projects": {
     "title": "📂 Proyectos",
@@ -100,7 +78,14 @@
   },
   "Technologies": {
     "title": "⚙️ Tecnologías",
-    "text": ["He dominado", "tecnologías clave", "para desarrollar soluciones ", "innovadoras y eficientes.", "Descubre las herramientas que utilizo para llevar cada proyecto al ", "siguiente nivel"],
+    "text": [
+      "He dominado",
+      "tecnologías clave",
+      "para desarrollar soluciones ",
+      "innovadoras y eficientes.",
+      "Descubre las herramientas que utilizo para llevar cada proyecto al ",
+      "siguiente nivel"
+    ],
     "technologies": [
       {
         "name": "Python",
@@ -215,5 +200,26 @@
     ],
     "FORM_TITLE": "Envíame un mensaje 🚀",
     "FORM_BUTTON": "Enviar"
+  },
+  "ServicePage": {
+    "TITLE": ["El", "software ", "que necesitas,", "hecho con", "pasión"],
+    "PHRASE": "Estos son solo algunos de mis servicios. Estoy listo para adaptarme a nuevos desafios.",
+    "SERVICES": [
+      {
+        "TITLE": "Desarrollo Web",
+        "DESCRIPTION": "Creo aplicaciones web modernas, escalables y hechas a la medida, utilizando las tecnologías más avanzadas del mercado para llevar tu negocio al siguiente nivel.",
+        "ICON": "desktop"
+      },
+      {
+        "TITLE": "Mantenimiento integral",
+        "DESCRIPTION": "Ofrezco un servicio completo de mantenimiento y soporte técnico, asegurando que tus aplicaciones web y móviles se mantengan actualizadas, seguras y funcionando sin problemas.",
+        "ICON": "wrench"
+      },
+      {
+        "TITLE": "Desarrollo de APIs",
+        "DESCRIPTION": "Desarrollo APIs RESTful escalables y eficientes que conectan tus servicios de manera rápida y segura, permitiendo una integración fluida con cualquier plataforma.",
+        "ICON": "code"
+      }
+    ]
   }
 }

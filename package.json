@@ -16,6 +16,7 @@
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.17",
     "astro": "^4.15.2",
+    "astro-icon": "^1.1.1",
     "astro-particles": "^2.10.0",
     "framer-motion": "^10.16.4",
     "keen-slider": "^6.8.6",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@catppuccin/tailwindcss": "^0.1.6",
+    "@iconify-json/mynaui": "^1.2.2",
     "@iconify/tailwind": "^0.1.4",
     "gh-pages": "^6.0.0"
   }
