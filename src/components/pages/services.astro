@@ -10,24 +10,28 @@ const servicePage = i18n.ServicePage;
 const services = servicePage.SERVICES;
 ---
 
-<main class="h-screen w-full flex items-center justify-center">
-  <section class="w-11/12 h-5/6 flex flex-col items-center justify-around">
-    <div class="w-full text-center text-ctp-text font-bold flex flex-col gap-4">
-      <p class="text-5xl">
+<main class="h-auto lg:min-h-screen w-full flex items-center justify-center">
+  <section class="w-11/12 lg:h-5/6 flex flex-col items-center justify-around gap-10 py-10 2xl:py-0">
+    <div class="w-full text-center text-ctp-text font-bold flex flex-col gap-1 lg:gap-4">
+      <p class="text-4xl lg:text-5xl">
         {servicePage.TITLE[0]}
         <span class="text-ctp-peach">{servicePage.TITLE[1]}</span>{
           servicePage.TITLE[2]
         }
       </p>
-      <p class="text-4xl">
+      <p class="text-3xl lg:text-4xl">
         {servicePage.TITLE[3]}
         <span class="text-ctp-peach">{servicePage.TITLE[4]}</span>
       </p>
     </div>
-    <div class="w-full flex justify-around">
-      {services.map((service) => <CardServices service={service} />)}
+    <div class="w-full lg:w-5/6 2xl:w-4/6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 xl:gap-12 2xl:gap-8 place-items-center">
+      {services.map((service, index) => (
+        <div class={`col-span-1 ${index === 2 ? 'md:col-span-2 md:col-start-1 md:col-end-3 xl:col-span-1' : ''}`}>
+          <CardServices service={service} />
+        </div>
+      ))}
     </div>
-    <p class="text-ctp-text">
+    <p class="text-ctp-text text-center">
       {servicePage.PHRASE}
     </p>
   </section>

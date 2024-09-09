@@ -42,32 +42,6 @@
       } 
     }
   ,
-  "Services": {
-    "title": "// Services",
-    "more": "And many more...",
-    "services": [
-      {
-        "title": "Web Development",
-        "description": "I will implement the best technologies to create a tailor-made website. I provide completely customized and efficient solutions.",
-        "image": "/images/pic1.jpg"
-      },
-      {
-        "title": "Backend Development",
-        "description": "I integrate systems and APIs so that your website can interact with other platforms and services, obtaining new functionalities.",
-        "image": "/images/apiIntegracion.png"
-      },
-      {
-        "title": "SEO Optimization",
-        "description": "I increase the visibility of your website on search engines so you can reach more people.",
-        "image": "/images/seoPic.png"
-      },
-      {
-        "title": "Web maintenance and update",
-        "description": "I will take care of keeping your website updated, secure, and free of errors so that you can focus on your business without worries.",
-        "image": "/images/mantenimientoWeb.jpg"
-      }
-    ]
-  },
   "Projects": {
     "title": "📂 Projects",
     "moreButton": "More Projects",
@@ -227,5 +201,26 @@
     ],
     "FORM_TITLE": "Send me a message 🚀",
     "FORM_BUTTON": "Send"
+  },
+  "ServicePage": {
+    "TITLE": ["The", "software", "you need,", "crafted with", "passion"],
+    "PHRASE": "These are just some of my services. I'm ready to adapt to new challenges.",
+    "SERVICES": [
+      {
+        "TITLE": "Web Development",
+        "DESCRIPTION": "I create modern, scalable, and custom-made web applications using the latest technologies to take your business to the next level.",
+        "ICON": "desktop"
+      },
+      {
+        "TITLE": "Comprehensive Maintenance",
+        "DESCRIPTION": "I offer a complete maintenance and technical support service to ensure that your web and mobile applications remain updated, secure, and running smoothly.",
+        "ICON": "wrench"
+      },
+      {
+        "TITLE": "API Development",
+        "DESCRIPTION": "I develop scalable and efficient RESTful APIs that seamlessly connect your services quickly and securely, allowing for smooth platform integration.",
+        "ICON": "code"
+      }
+    ]
   }
 }
