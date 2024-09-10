@@ -2,63 +2,69 @@
 
 ---
 
-<button class="bg-ctp-peach flex justify-center items-center rounded-full w-10 h-10 scroll-link z-10">
-    <a class="" href="#aboutMe"><i class="fa-solid fa-chevron-down text-2xl"></i> </a>
+<button
+  class="bg-ctp-peach flex justify-center items-center rounded-full w-10 h-10 scroll-link z-10"
+>
+  <a class="" href="#aboutMe"
+    ><i class="fa-solid fa-chevron-down text-2xl"></i>
+  </a>
 </button>
 
 <style>
-    html {
-        scroll-behavior: auto;
-    }
+  html {
+    scroll-behavior: auto;
+  }
 
-    .fa-solid {
-        color: white;
-    }
+  .fa-solid {
+    color: white;
+  }
 
-    .scroll-link {
-        cursor: pointer;
-        animation: bounce 0.5s infinite alternate;
-    }
+  .scroll-link {
+    cursor: pointer;
+    animation: bounce 0.5s infinite alternate;
+  }
 
-    @keyframes bounce {
-        to {
-            transform: translateY(-8px);
-        }
+  @keyframes bounce {
+    to {
+      transform: translateY(-8px);
     }
+  }
 
-    .scroll-link:hover,
-    .scroll-link.animated {
-        animation: none; /* Detener la animación al hacer hover */
-        transform: scale(1.2);
-    }
+  .scroll-link:hover,
+  .scroll-link.animated {
+    animation: none; /* Detener la animación al hacer hover */
+    transform: scale(1.2);
+  }
 </style>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const scrollLink = document.querySelector(".scroll-link");
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollLink = document.querySelector(".scroll-link");
 
-        // Función para manejar el clic en el enlace
-        scrollLink.addEventListener("click", function (e) {
-            e.preventDefault();
+    // Función para manejar el clic en el enlace
+    scrollLink.addEventListener("click", function (e) {
+      e.preventDefault();
 
-            const targetId = this.querySelector("a").getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
+      const targetId = this.querySelector("a")
+        .getAttribute("href")
+        .substring(1);
+      const targetElement = document.getElementById(targetId);
 
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: "smooth" });
-            }
-        });
-
-        // Función para manejar el desplazamiento y aplicar la animación
-        window.addEventListener("scroll", function() {
-            const scrollPosition = window.scrollY;
-            const scrollThreshold = 200; // Ajusta este valor según sea necesario
-
-            if (scrollPosition > scrollThreshold) {
-                scrollLink.classList.add("animated");
-            } else {
-                scrollLink.classList.remove("animated");
-            }
-        });
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
     });
+
+    // Función para manejar el desplazamiento y aplicar la animación
+    window.addEventListener("scroll", function () {
+      const scrollPosition = window.scrollY;
+      const scrollThreshold = 200; // Ajusta este valor según sea necesario
+
+      if (scrollPosition > scrollThreshold) {
+        scrollLink.classList.add("animated");
+      } else {
+        scrollLink.classList.remove("animated");
+      }
+    });
+  });
 </script>

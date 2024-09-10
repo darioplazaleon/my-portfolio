@@ -53,7 +53,7 @@
       {
         "title": "Tetris Demo",
         "description": "En este proyecto, implementé un juego de Tetris en Python utilizando la biblioteca Pygame como parte de mi práctica y consolidación de conocimientos en Programación Orientada a Objetos (OOP).",
-        "image": "/images/projects/480shots_so.png",
+        "image": "tetrisImage",
         "urlRepo": "https://github.com/darioplazaleon/tetris-python.git",
         "urlDemo": "https://darioplaza.tech",
         "label": ["Python", "PyGame"]
@@ -61,7 +61,7 @@
       {
         "title": "Lol App",
         "description": "Desarrollé un proyecto utilizando la API de Riot Games para demostrar mi habilidad para trabajar con APIs. Esta aplicación demuestra cómo manejar datos de la API de Riot Games",
-        "image": "/images/projects/529shots_so.png",
+        "image": "lolImage",
         "urlRepo": "https://github.com/darioplazaleon/tetris-python.git",
         "urlDemo": "https://darioplaza.tech",
         "label": ["React", "NextJS"]
@@ -69,7 +69,7 @@
       {
         "title": "Fruit Market",
         "description": "Aplicacion desarrollada en Android Studio que simula un mercado de frutas. La aplicacion permite agregar frutas al carrito de compras y ver el total de la compra.",
-        "image": "/images/projects/918shots_so.png",
+        "image": "fruitImage",
         "urlRepo": "https://github.com/darioplazaleon/FruitApp-Compose",
         "urlDemo": "",
         "label": ["Kotlin", "Compose"]
@@ -202,8 +202,9 @@
     "FORM_BUTTON": "Enviar"
   },
   "ServicePage": {
-    "TITLE": ["El", "software ", "que necesitas,", "hecho con", "pasión"],
+    "TITLE": ["El", "software ", "que necesitas,", "hecho con", "pasión."],
     "PHRASE": "Estos son solo algunos de mis servicios. Estoy listo para adaptarme a nuevos desafios.",
+    "GO_BUTTON": "Empezemos",
     "SERVICES": [
       {
         "TITLE": "Desarrollo Web",

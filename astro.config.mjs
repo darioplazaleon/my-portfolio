@@ -16,5 +16,7 @@ export default defineConfig({
       'en' : 'es'
     }
   },
-  integrations: [tailwind(), react(), icon()],
+  integrations: [tailwind(), react(), icon({
+    iconDir: "src/icons",
+  })],
 });

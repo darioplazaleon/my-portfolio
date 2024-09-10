@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const { techInfo } = Astro.props;
 
 const techs = techInfo.technologies;
@@ -32,7 +34,7 @@ const texts = techInfo.text;
       {
         techs.map((tech, index) => (
           <div class={`keen-slider__slide number-slide${index + 1}`}>
-            <img src={tech.image} alt={tech.name} class="w-20" />
+            <Image src={tech.image} alt={tech.name} width="80" height="80" />
           </div>
         ))
       }

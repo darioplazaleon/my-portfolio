@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import { getI18N } from "../../i18n";
@@ -9,7 +10,7 @@ const t = useTranslations(lang);
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
-const infoFoot = i18n["Footer"]
+const infoFoot = i18n["Footer"];
 ---
 
 <footer class="w-full h-auto flex flex-col items-center bg-ctp-base border-t-2">
@@ -23,28 +24,42 @@ const infoFoot = i18n["Footer"]
           href="https://www.linkedin.com/in/dario-plaza/"
           target="_blank"
           class="flex items-center gap-2"
-          ><i class="fa-brands fa-linkedin text-3xl"></i> Linkedin
+          ><Icon name="mynaui:brand-linkedin" class="text-3xl" /> Linkedin
         </a>
         <a
           href="https://github.com/darioplazaleon"
           target="_blank"
           class="flex items-center gap-2"
-          ><i class="fa-brands fa-square-github text-3xl"></i>GitHub
+          ><Icon name="mynaui:brand-github" class="text-3xl" />GitHub
         </a>
         <a
           href="discordapp.com/users/295518729230352384"
           target="_blank"
           class="flex items-center gap-2"
-          ><i class="fa-brands fa-discord text-2xl"></i>Discord
+          ><Icon name="discord" class="text-3xl"/>Discord
         </a>
       </div>
       <div class="flex flex-col gap-2">
-        <p class="text-ctp-mauve underline font-bold">{t("footer.explorerTitle")}</p>
+        <p class="text-ctp-mauve underline font-bold">
+          {t("footer.explorerTitle")}
+        </p>
         <ul class="text-ctp-peach flex flex-col gap-2">
-          <li><a href={getRelativeLocaleUrl(currentLocale ?? "", "")}>{t("nav.home")}</a></li>
-          <li><a href={getRelativeLocaleUrl(currentLocale ?? "", "aboutme")}>{t("nav.about")}</a></li>
-          <li><a href={getRelativeLocaleUrl(currentLocale ?? "", "services")}>{t("nav.services")}</a></li>
-          <li><a href={getRelativeLocaleUrl(currentLocale ?? "", "projects")}>{t("nav.projects")}</a></li>
+          <li>
+            <a href={getRelativeLocaleUrl(currentLocale ?? "", "")}
+              >{t("nav.home")}</a>
+          </li>
+          <li>
+            <a href={getRelativeLocaleUrl(currentLocale ?? "", "aboutme")}
+              >{t("nav.about")}</a>
+          </li>
+          <li>
+            <a href={getRelativeLocaleUrl(currentLocale ?? "", "services")}
+              >{t("nav.services")}</a>
+          </li>
+          <li>
+            <a href={getRelativeLocaleUrl(currentLocale ?? "", "projects")}
+              >{t("nav.projects")}</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -55,7 +70,7 @@ const infoFoot = i18n["Footer"]
           <p class="text-center text-ctp-text">{t("footer.contact.phrase")}</p>
         </div>
         <button class="w-2/6 flex items-center justify-center">
-          <a href={getRelativeLocaleUrl(currentLocale ?? "", "contact")}
+          <a href={getRelativeLocaleUrl(currentLocale ?? "", "contact")} aria-label="Contacto"
             ><i class="fa-solid fa-arrow-right text-ctp-peach"></i></a
           >
         </button>
@@ -77,7 +92,7 @@ const infoFoot = i18n["Footer"]
       <p class="font-bold text-5xl">Dario</p>
     </div>
   </div>
-  <a href="" class="text-ctp-text mt-3"
+  <a href="mailto:darioalessandrop@gmail.com" class="text-ctp-text mt-3"
     >{t("footer.contact.email")}:
     <span class="font-bold underline">darioalessandrop@gmail.com</span></a
   >
@@ -85,4 +100,3 @@ const infoFoot = i18n["Footer"]
     {t("footer.copy")}
   </p>
 </footer>
-

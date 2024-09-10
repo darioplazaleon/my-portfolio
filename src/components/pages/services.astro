@@ -27,7 +27,7 @@ const services = servicePage.SERVICES;
     <div class="w-full lg:w-5/6 2xl:w-4/6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 xl:gap-12 2xl:gap-8 place-items-center">
       {services.map((service, index) => (
         <div class={`col-span-1 ${index === 2 ? 'md:col-span-2 md:col-start-1 md:col-end-3 xl:col-span-1' : ''}`}>
-          <CardServices service={service} />
+          <CardServices service={service} buttonText={servicePage.GO_BUTTON}/>
         </div>
       ))}
     </div>

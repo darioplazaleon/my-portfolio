@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import  profilePhoto from "../../images/magic2.png"
+
 const { aboutInfo } = Astro.props;
 
 const textMe = aboutInfo.menu.aboutMe;
@@ -24,19 +27,19 @@ const textMe = aboutInfo.menu.aboutMe;
       <span class="underline underline-offset-2">{textMe[1]}</span>{textMe[2]}
     </p>
     <div class="flex gap-10 justify-center text-4xl text-ctp-mauve">
-      <a href="https://www.linkedin.com/in/dario-plaza/" target="_blank"
+      <a href="https://www.linkedin.com/in/dario-plaza/" target="_blank" aria-label="LinkedIn de Dario Plaza"
         ><i class="fa-brands fa-linkedin"></i>
       </a>
-      <a href="https://github.com/darioplazaleon" target="_blank"
+      <a href="https://github.com/darioplazaleon" target="_blank" aria-label="Github de Dario Plaza"
         ><i class="fa-brands fa-square-github"></i>
       </a>
-      <a href="mailto:darioplaza02@hotmail.com" target="_blank"
+      <a href="mailto:darioplaza02@hotmail.com" target="_blank" aria-label="Correo de Dario Plaza"
         ><i class="fa-solid fa-square-envelope"></i>
       </a>
     </div>
   </div>
   <div class="flex flex-col items-center md:w-3/6">
-    <img src="/magic2.png" alt="" class="w-full" />
+    <Image src={profilePhoto} alt="Foto de perfil" class="w-full"/>
     <button class="bg-ctp-peach w-40 h-12 rounded-lg"
       ><a href={aboutInfo.linkCV}>{aboutInfo.buttonCV}</a>
     </button>
