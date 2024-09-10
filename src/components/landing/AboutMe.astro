@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import  profilePhoto from "../../images/magic2.png"
 
 const { aboutInfo } = Astro.props;
@@ -26,15 +27,24 @@ const textMe = aboutInfo.menu.aboutMe;
       {textMe[0]}
       <span class="underline underline-offset-2">{textMe[1]}</span>{textMe[2]}
     </p>
-    <div class="flex gap-10 justify-center text-4xl text-ctp-mauve">
-      <a href="https://www.linkedin.com/in/dario-plaza/" target="_blank" aria-label="LinkedIn de Dario Plaza"
-        ><i class="fa-brands fa-linkedin"></i>
+    <div class="flex gap-10 justify-center items-center text-ctp-mauve">
+      <a
+        href="https://www.linkedin.com/in/dario-plaza/"
+        target="_blank"
+        aria-label="Linkedin Dario Plaza"
+        ><Icon name="linkedin" class="text-5xl"/>
       </a>
-      <a href="https://github.com/darioplazaleon" target="_blank" aria-label="Github de Dario Plaza"
-        ><i class="fa-brands fa-square-github"></i>
+      <a
+        href="https://github.com/darioplazaleon"
+        target="_blank"
+        aria-label="Github Dario Plaza"
+        ><Icon name="github" class="text-4xl"/>
       </a>
-      <a href="mailto:darioplaza02@hotmail.com" target="_blank" aria-label="Correo de Dario Plaza"
-        ><i class="fa-solid fa-square-envelope"></i>
+      <a
+        href="mailto:darioplaza02@hotmail.com"
+        target="_blank"
+        aria-label="Email Dario Plaza"
+        ><Icon name="mail" class="text-5xl"/>
       </a>
     </div>
   </div>

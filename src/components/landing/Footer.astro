@@ -71,15 +71,15 @@ const infoFoot = i18n["Footer"];
         </div>
         <button class="w-2/6 flex items-center justify-center">
           <a href={getRelativeLocaleUrl(currentLocale ?? "", "contact")} aria-label="Contacto"
-            ><i class="fa-solid fa-arrow-right text-ctp-peach"></i></a
+            ><Icon name="mynaui:arrow-right" class="text-3xl text-ctp-peach"/></a
           >
         </button>
       </div>
       <a
         href={infoFoot.linkCV}
         target="_blank"
-        class="bg-ctp-peach text-white w-20 lg:w-28 lg:h-12 h-10 rounded-xl flex flex-row justify-center items-center font-bold"
-        ><i class="fa-solid fa-file-arrow-down pr-2"></i>CV</a
+        class="bg-ctp-peach text-[#11111B] w-20 lg:w-28 lg:h-12 h-10 rounded-xl flex justify-center items-center font-bold gap-2"
+        >CV <Icon name="mynaui:file" class="text-2xl"/></a
       >
     </div>
   </div>

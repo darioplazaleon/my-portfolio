@@ -1,19 +1,20 @@
 ---
 import GoToButton from "../GoToButton.astro";
+import { Icon } from "astro-icon/components";
 
 // PARTICULAS
 import Particles from "astro-particles";
 import type { ISourceOptions } from "tsparticles-engine";
 
-import { type Container, type Engine} from "tsparticles-engine";
-import "../../styles/layout.css"
+import { type Container, type Engine } from "tsparticles-engine";
+import "../../styles/layout.css";
 
 const options: ISourceOptions = {
   fullScreen: {
     enable: false,
     zIndex: 0,
   },
-  style:{
+  style: {
     position: "absolute",
     top: "0",
     left: "0",
@@ -120,52 +121,83 @@ const options: ISourceOptions = {
   },
 };
 
-const {infoHero} = Astro.props
+const { infoHero } = Astro.props;
 ---
 
-<section id="hero" class=" flex flex-col justify-center items-center h-screen  max-h-screen">
-    <div class="containerParticles">
-        <Particles id="particlesHelp" options={options} init="particlesInit"/>
+<section
+  id="hero"
+  class="flex flex-col justify-center items-center h-screen max-h-screen"
+>
+  <div class="containerParticles">
+    <Particles id="particlesHelp" options={options} init="particlesInit" />
+  </div>
+  <div
+    class="relative mb-56 text-black h-3/4 flex flex-col justify-center items-center space-y-4 lg:mb-32"
+  >
+    <p
+      class="text-3xl lg:text-4xl text-center text-white"
+      data-en="Hi!, i'm"
+      data-es="¡Hola!, soy"
+      id="heroGreeting"
+    >
+      {infoHero[0].introduction}
+    </p>
+    <h1 class="text-6xl lg:text-9xl font-bold text-center text-ctp-peach">
+      {infoHero[0].name}
+    </h1>
+    <h1 class="text-ctp-peach text-3xl font-semibold text-center">
+      {infoHero[0].profession}
+    </h1>
+    <div class="flex items-center space-x-4 text-white text-3xl z-10">
+      <a
+        href="https://www.linkedin.com/in/dario-plaza/"
+        target="_blank"
+        aria-label="Linkedin Dario Plaza"
+        ><Icon name="linkedin" class="text-4xl"/>
+      </a>
+      <a
+        href="https://github.com/darioplazaleon"
+        target="_blank"
+        aria-label="Github Dario Plaza"
+        ><Icon name="github" class="text-3xl"/>
+      </a>
+      <a
+        href="mailto:darioplaza02@hotmail.com"
+        target="_blank"
+        aria-label="Email Dario Plaza"
+        ><Icon name="mail" class="text-4xl"/>
+      </a>
     </div>
-    <div class="relative mb-56 text-black h-3/4 flex flex-col justify-center items-center space-y-4 lg:mb-32">
-        <p class="text-3xl lg:text-4xl text-center text-white" data-en="Hi!, i'm" data-es="¡Hola!, soy" id="heroGreeting">{infoHero[0].introduction}</p>
-        <h1 class="text-6xl lg:text-9xl font-bold text-center text-ctp-peach">{infoHero[0].name}</h1>
-        <h1 class="text-ctp-peach text-3xl font-semibold text-center">{infoHero[0].profession}</h1>
-        <div class="flex space-x-4 text-white text-3xl z-10">
-            <a href="https://www.linkedin.com/in/dario-plaza/" target="_blank"><i class="fa-brands fa-linkedin"></i> </a>
-            <a href="https://github.com/darioplazaleon" target="_blank"><i class="fa-brands fa-square-github"></i> </a>
-            <a href="mailto:darioplaza02@hotmail.com" target="_blank"><i class="fa-solid fa-square-envelope"></i> </a>
-        </div>
-        <div class="text-black absolute bottom-0 z-10"><GoToButton/></div>
-    </div>
+    <div class="text-black absolute bottom-0 z-10"><GoToButton /></div>
+  </div>
 </section>
 
 <style>
-    #hero {
-        background: linear-gradient(to bottom, #11111b, #1e1e2e);
-        color: #ffffff;
-        position: relative;
-    }
+  #hero {
+    background: linear-gradient(to bottom, #11111b, #1e1e2e);
+    color: #ffffff;
+    position: relative;
+  }
 
-    .containerParticles {
-        display: none;
-    }
+  .containerParticles {
+    display: none;
+  }
 </style>
 
 <script>
-    import { loadFull } from "tsparticles";
+  import { loadFull } from "tsparticles";
 
-    // the function name is the parameter passed to the init attribute
-    // required
-    // add the function to window is mandatory, it will be searched there
-    window.particlesInit = async function (engine: Engine) {
-      await loadFull(engine);
-    };
+  // the function name is the parameter passed to the init attribute
+  // required
+  // add the function to window is mandatory, it will be searched there
+  window.particlesInit = async function (engine: Engine) {
+    await loadFull(engine);
+  };
 
-    // the function name is the parameter passed to the loaded attribute
-    // optional
-    // add the function to window is mandatory, it will be searched there
-    window.particlesLoaded = function (container: Container) {
-      console.log("particlesLoaded callback");
-    };
+  // the function name is the parameter passed to the loaded attribute
+  // optional
+  // add the function to window is mandatory, it will be searched there
+  window.particlesLoaded = function (container: Container) {
+    console.log("particlesLoaded callback");
+  };
 </script>
