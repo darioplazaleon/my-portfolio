@@ -2,12 +2,8 @@
 import GoToButton from "../GoToButton.astro";
 import { Icon } from "astro-icon/components";
 
-// PARTICULAS
 import Particles from "astro-particles";
 import type { ISourceOptions } from "tsparticles-engine";
-
-import { type Container, type Engine } from "tsparticles-engine";
-import "../../styles/layout.css";
 
 const options: ISourceOptions = {
   fullScreen: {
@@ -128,9 +124,7 @@ const { infoHero } = Astro.props;
   id="hero"
   class="flex flex-col justify-center items-center h-screen max-h-screen"
 >
-  <div class="containerParticles">
-    <Particles id="particlesHelp" options={options} init="particlesInit" />
-  </div>
+  <Particles id="particlesHelp" options={options} init="particlesInit" />
   <div
     class="relative mb-56 text-black h-3/4 flex flex-col justify-center items-center space-y-4 lg:mb-32"
   >
@@ -153,19 +147,19 @@ const { infoHero } = Astro.props;
         href="https://www.linkedin.com/in/dario-plaza/"
         target="_blank"
         aria-label="Linkedin Dario Plaza"
-        ><Icon name="linkedin" class="text-4xl"/>
+        ><Icon name="linkedin" class="text-4xl" />
       </a>
       <a
         href="https://github.com/darioplazaleon"
         target="_blank"
         aria-label="Github Dario Plaza"
-        ><Icon name="github" class="text-3xl"/>
+        ><Icon name="github" class="text-3xl" />
       </a>
       <a
         href="mailto:darioplaza02@hotmail.com"
         target="_blank"
         aria-label="Email Dario Plaza"
-        ><Icon name="mail" class="text-4xl"/>
+        ><Icon name="mail" class="text-4xl" />
       </a>
     </div>
     <div class="text-black absolute bottom-0 z-10"><GoToButton /></div>
@@ -178,14 +172,12 @@ const { infoHero } = Astro.props;
     color: #ffffff;
     position: relative;
   }
-
-  .containerParticles {
-    display: none;
-  }
 </style>
 
 <script>
   import { loadFull } from "tsparticles";
+
+  import { type Container, type Engine } from "tsparticles-engine";
 
   // the function name is the parameter passed to the init attribute
   // required

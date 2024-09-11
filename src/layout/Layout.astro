@@ -4,17 +4,19 @@ import Footer from "../components/landing/Footer.astro";
 import "../styles/layout.css";
 import { ViewTransitions } from "astro:transitions";
 
-const { title, lang} = Astro.props;
+const { title, description } = Astro.props;
 
-const {currentLocale} = Astro;
+const { currentLocale } = Astro;
 ---
 
 <!doctype html>
 <html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <meta name="description" content={description} />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"
@@ -44,20 +46,16 @@ const {currentLocale} = Astro;
     />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-
-    <script
-      src="https://kit.fontawesome.com/3e9cace6d9.js"
-      crossorigin="anonymous"></script>
     <ViewTransitions />
   </head>
   <body class="custom-gradient">
     <Navbar />
-      <slot />
-    <Footer/>
+    <slot />
+    <Footer />
+    <script
+      src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"
+    ></script>
   </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"
-  ></script>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,500&display=swap");
 

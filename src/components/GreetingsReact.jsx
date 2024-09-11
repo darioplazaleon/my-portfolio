@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Greeting = () => {
@@ -11,6 +11,7 @@ const Greeting = () => {
         { text: "こんにちは", emoji: "👋" }, // Japonés
         { text: "안녕하세요", emoji: "👋" }, // Coreano
     ];
+    
 
     const [index, setIndex] = useState(0);
     const [isExiting, setIsExiting] = useState(false);
