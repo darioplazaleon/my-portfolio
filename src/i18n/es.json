@@ -59,12 +59,12 @@
         "label": ["Python", "PyGame"]
       },
       {
-        "title": "Lol App",
-        "description": "Desarrollé un proyecto utilizando la API de Riot Games para demostrar mi habilidad para trabajar con APIs. Esta aplicación demuestra cómo manejar datos de la API de Riot Games",
-        "image": "lolImage",
-        "urlRepo": "https://github.com/darioplazaleon/tetris-python.git",
-        "urlDemo": "https://darioplaza.tech",
-        "label": ["React", "NextJS"]
+        "title": "Inventario",
+        "description": "Este proyecto fue realizado en Python utilizando FastAPI y PostgreSQL. Es una API RESTful que permite gestionar el inventario de una tienda.",
+        "image": "inventoryImage",
+        "urlRepo": "https://github.com/darioplazaleon/inventory-management.git",
+        "urlDemo": "",
+        "label": ["Python", "FastAPI", "PostgreSQL", "Docker"]
       },
       {
         "title": "Fruit Market",

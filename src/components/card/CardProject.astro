@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import tetrisImage from "../../images/projects/tetris.png";
 import fruitImage from "../../images/projects/fruitmarket.png";
-import lolImage from "../../images/projects/lolapp.png";
+import inventoryManagement from "../../images/projects/inventory-management.png"
 
 const { projectInfo, align } = Astro.props;
 
@@ -12,7 +12,7 @@ const labels = projectInfo.label;
 const imageMap = {
   tetrisImage: tetrisImage,
   fruitImage: fruitImage,
-  lolImage: lolImage,
+  inventoryImage: inventoryManagement,
 };
 
 const projectImage = imageMap[projectInfo.image];
@@ -38,7 +38,7 @@ const projectImage = imageMap[projectInfo.image];
       <div class="sm:flex gap-4 hidden">
         {
           labels.map((label, index) => (
-            <span class="font-bold bg-ctp-peach text-xs w-16 h-8 rounded-xl flex items-center justify-center">
+            <span class="font-bold bg-ctp-peach text-xs w-20 h-8 rounded-xl flex items-center justify-center">
               {label}
             </span>
           ))
