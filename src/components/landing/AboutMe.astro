@@ -1,89 +1,97 @@
 ---
-import { Image } from "astro:assets";
-import { Icon } from "astro-icon/components";
-import  profilePhoto from "../../images/magic2.png"
+import {Image} from "astro:assets";
+import {Icon} from "astro-icon/components";
+import profilePhoto from "../../images/magic2.png"
 
-const { aboutInfo } = Astro.props;
+const {aboutInfo} = Astro.props;
 
 const textMe = aboutInfo.menu.aboutMe;
 ---
 
 <section
-  id="aboutMe"
-  class="flex flex-col lg:flex-row justify-center w-screen items-center h-screen bg-ctp-base"
+        id="aboutMe"
+        class="flex flex-col lg:flex-row justify-center w-screen items-center h-screen bg-ctp-base"
 >
-  <div
-    class="w-11/12 lg:w-4/6 text-center flex flex-col gap-5 px-2 lg:ml-10 lg:h-90"
-  >
-    <div class="flex flex-col lg:text-start lg:pb-10">
-      <h1 class="font-bold text-ctp-peach text-4xl sm:text-5xl lg:text-6xl">
-        {aboutInfo.title}
-      </h1>
-      <p class="text-white font-semibold sm:text-xl lg:text-2xl">
-        {aboutInfo.subtitle}
-      </p>
+    <div
+            class="w-11/12 lg:w-4/6 text-center flex flex-col gap-5 px-2 lg:ml-10 lg:h-90"
+    >
+        <div class="flex flex-col lg:text-start lg:pb-10">
+            <h1 class="font-bold text-ctp-peach text-4xl sm:text-5xl lg:text-6xl">
+                {aboutInfo.title}
+            </h1>
+            <p class="text-white font-semibold sm:text-xl lg:text-2xl">
+                {aboutInfo.subtitle}
+            </p>
+        </div>
+        <p class="text-white py-4 sm:text-xl lg:text-2xl w-full" id="textMe">
+            {textMe[0]}
+            <span class="underline underline-offset-2">{textMe[1]}</span>{textMe[2]}
+        </p>
+        <div class="flex gap-10 justify-center items-center text-ctp-mauve">
+            <a
+                    href="https://www.linkedin.com/in/dario-plaza/"
+                    target="_blank"
+                    aria-label="Linkedin Dario Plaza"
+            >
+                <Icon name="linkedin" class="text-5xl"/>
+            </a>
+            <a
+                    href="https://github.com/darioplazaleon"
+                    target="_blank"
+                    aria-label="Github Dario Plaza"
+            >
+                <Icon name="github" class="text-4xl"/>
+            </a>
+            <a
+                    href="mailto:contact@plazaleon.tech"
+                    target="_blank"
+                    aria-label="Email Dario Plaza"
+            >
+                <Icon name="mail" class="text-5xl"/>
+            </a>
+        </div>
+        <div class="flex justify-center items-center">
+            <button class="bg-ctp-peach w-40 h-12 rounded-lg"
+            ><a href={aboutInfo.linkCV}>{aboutInfo.buttonCV}</a>
+            </button>
+        </div>
     </div>
-    <p class="text-white py-4 sm:text-xl lg:text-2xl w-full" id="textMe">
-      {textMe[0]}
-      <span class="underline underline-offset-2">{textMe[1]}</span>{textMe[2]}
-    </p>
-    <div class="flex gap-10 justify-center items-center text-ctp-mauve">
-      <a
-        href="https://www.linkedin.com/in/dario-plaza/"
-        target="_blank"
-        aria-label="Linkedin Dario Plaza"
-        ><Icon name="linkedin" class="text-5xl"/>
-      </a>
-      <a
-        href="https://github.com/darioplazaleon"
-        target="_blank"
-        aria-label="Github Dario Plaza"
-        ><Icon name="github" class="text-4xl"/>
-      </a>
-      <a
-        href="mailto:darioplaza02@hotmail.com"
-        target="_blank"
-        aria-label="Email Dario Plaza"
-        ><Icon name="mail" class="text-5xl"/>
-      </a>
-    </div>
-  </div>
-  <div class="flex flex-col items-center md:w-3/6">
-    <Image src={profilePhoto} alt="Foto de perfil" class="w-full"/>
-    <button class="bg-ctp-peach w-40 h-12 rounded-lg"
-      ><a href={aboutInfo.linkCV}>{aboutInfo.buttonCV}</a>
-    </button>
-  </div>
+    <!--<div class="flex flex-col items-center md:w-3/6">-->
+    <!--    <Image src={profilePhoto} alt="Foto de perfil" class="w-full"/>-->
+    <!--    <button class="bg-ctp-peach w-40 h-12 rounded-lg"-->
+    <!--    ><a href={aboutInfo.linkCV}>{aboutInfo.buttonCV}</a>-->
+    <!--    </button>-->
+    <!--</div>-->
 </section>
 
 <style>
-  @media screen and (max-width: 1024px) {
-    #aboutMe {
-      height: 1100px;
+    @media screen and (max-width: 1024px) {
+        #aboutMe {
+            height: 1100px;
+        }
     }
-  }
 
-  #textMe {
-    position: relative;
-  }
+    #textMe {
+        position: relative;
+    }
 
-  #textMe::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background-color: #fab387;
-  }
+    #textMe::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: #fab387;
+    }
 
-  #textMe::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 60px;
-    height: 3px;
-    background-color: #fab387;
-  }
+    #textMe::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 3px;
+        background-color: #fab387;
+    }
 </style>
